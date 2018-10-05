@@ -1,0 +1,45 @@
+.extra__caption {
+  font-size: 24px;
+  line-height: 24px;
+  color: @black;
+  font-weight: 400;
+}
+
+.extra__list {
+  .reset-indents();
+  list-style: none;
+}
+
+.extra__item {
+  .reset-indents();
+}
+
+.extra__name {
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.extra__table {
+  .simple-text();
+  line-height: 14px;
+}
+// если по сравнению с миксином отличается только высота строки, то так можно записать? "line-height: 14px" переопределит "line-height: 18px" из миксина?
+
+.extra__button {
+  .green-button();
+}
+
+.extra__order-all {
+  display: block;
+  width: 280px;
+  height: 289px;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+  font-weight: 400;
+  background-image: url("img/gift-photo-mobile@1x.jpg");
+}

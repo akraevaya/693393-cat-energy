@@ -1,0 +1,42 @@
+.catalog__list {
+  .reset-indents();
+  list-style: none;
+}
+
+.catalog__item {
+  .reset-indents();
+}
+
+.catalog__image {
+  width: 140px;
+  height: 144px;
+}
+
+.catalog__name {
+  font-size: 16px;
+  line-height: 20px;
+  color: @black;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.catalog__table,
+.catalog__more {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: @text-darkgray;
+  font-weight: 400;
+}
+
+.catalog__button {
+  .green-button();
+  &--show-all {
+    color: @text-darkgray;
+    background-color: @bg-lightgray;
+  }
+}
+
+.catalog__plus {
+  border: 1px solid #d9d9d9;
+}
