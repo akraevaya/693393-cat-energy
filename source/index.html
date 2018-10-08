@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Cat Energy: Главная</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -14,13 +15,13 @@
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
+            <a class="site-list__link site-list__link--active">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">Каталог продукции</a>
+            <a class="site-list__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Подбор программы</a>
+            <a class="site-list__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -30,7 +31,7 @@
       <section class="about">
         <h1 class="about__caption">Функциональное питание для котов</h1>
         <p class="about__slogan">Занялся собой? Займись котом!</p>
-        <img class="about__can" src="img/index-can-mobile.png" width="280" height="270" alt="Функциональное питание для котов">
+        <img class="about__can" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Функциональное питание для котов">
         <a class="about__button" href="form.html">Подобрать программу</a>
       </section>
 
@@ -87,21 +88,22 @@
 
         <ul class="results__compare compare-list">
           <li class="compare-list__item compare-list__item--before">
-            <img class="compare-list__image compare-list__image--before" src="img/before-mobile.png" width="311" height="232" alt="Фото кота до">
+            <img class="compare-list__image compare-list__image--before" src="img/before-mobile@1x.png" width="311" height="232" alt="Фото кота до">
           </li>
           <li class="compare-list__item compare-list__item--after">
-            <img class="compare-list__image compare-list__image--after" src="img/after-mobile.png" width="251" height="240" alt="Фото кота после">
+            <img class="compare-list__image compare-list__image--after" src="img/after-mobile@1x.png" width="251" height="240" alt="Фото кота после">
           </li>
         </ul>
 
-        <div class="results-toggle">
-          <p class="results-toggle__item">Было</p>
-          <p class="results-toggle__item results-toggle__item--scale"></p>
-          <p class="results-toggle__item">Стало</p>
+        <div class="results__toggle toggle-block">
+          <p class="toggle-block__item">Было</p>
+          <p class="toggle-block__item toggle-block__item--scale"></p>
+          <p class="toggle-block__item">Стало</p>
         </div>
       </section>
 
       <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts__welcome">приглашаем  к сотрудничеству  дилеров!</p>
         <p class="contacts__address">ул. Большая Конюшенная, д. 19/8  Санкт-Петербург</p>
         <div class="contacts__map"></div>
@@ -110,7 +112,7 @@
 
     <footer class="page-footer">
       <a class="page-footer__logo">
-        <img class="page-footer__logo-text" src="img/footer-logo.svg" width="128" height="24" alt="Cat Energy - функциональное питание для котов">
+        <img class="page-footer__logo-text" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy - функциональное питание для котов">
       </a>
       <ul class="page-footer__social social-list">
         <li class="social-list__item social-list__item--vk">
