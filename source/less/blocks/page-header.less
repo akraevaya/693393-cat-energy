@@ -1,14 +1,31 @@
 .page-header {
-  .reset-indents();
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 265px;
+  margin: 0 auto;
 }
 
-.page-header__logo-image {
-  width: 33px;
-  height: 38px;
+.page-header__logo {
+  width: 271px;
+  height: 65px;
 }
 
-.page-header__logo-text {
-  width: 101px;
-  height: 18px;
+.page-header__toggle {
+  height: 66px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    flex-direction: row;
+    width: 708px;
+    height: 94px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 1220px;
+    height: 155px;
+  }
 }

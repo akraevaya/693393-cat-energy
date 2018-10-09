@@ -1,10 +1,19 @@
+.catalog {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .catalog__list {
   .reset-indents();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
 }
 
 .catalog__item {
   .reset-indents();
+  width: 280px;
 }
 
 .catalog__image {
@@ -36,4 +45,16 @@
 
 .catalog__plus {
   border: 1px solid #d9d9d9;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    width: 1220px;
+  }
 }

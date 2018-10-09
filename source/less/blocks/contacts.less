@@ -1,20 +1,46 @@
 .contacts {
-  .reset-indents();
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px;
   font-weight: 400;
+}
+
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-height: 115px;
 }
 
 .contacts__welcome {
   .base-text(16px, 20px);
   color: @black;
   text-transform: uppercase;
+  width: 140px;
 }
 
 .contacts__address {
   .base-text(14px, 20px);
   font-family: "Arial", sans-serif;
   color: @text-darkgray;
+  width: 140px;
 }
 
 .contacts__map {
   background-image: url("img/bg-map-mobile@1x.png");
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    width: 100%;
+  }
+
+  .contacts__wrapper {
+    width: 570px;
+  }
 }

@@ -1,4 +1,15 @@
-.form__legend {
+.form {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form__caption {
   .base-text(24px, 24px);
   color: @black;
   font-weight: 400;
@@ -8,6 +19,7 @@
 .form__field,
 .form__textarea {
   .base-text(16px, 18px);
+  max-width: 280px;
   color: #222222;
   font-weight: 400;
   text-transform: uppercase;
@@ -20,4 +32,16 @@
 
 .form__button {
   .green-button();
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 1220px;
+  }
 }

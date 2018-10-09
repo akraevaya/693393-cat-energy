@@ -1,7 +1,9 @@
 .about {
-  .reset-indents();
-  background-color: @green;
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 36px 22px 36px;
   background-image: url("img/index-background-mobile@1x.jpg");
+  background-size: contain;
 }
 
 .about__caption {
@@ -10,6 +12,7 @@
   font-weight: 400;
   color: @white;
   text-align: center;
+  background-color: @green;
 }
 
 .about__slogan {
@@ -19,8 +22,37 @@
   color: @white;
   text-transform: uppercase;
   text-align: center;
+  background-color: @green;
 }
 
 .about-button {
   .green-button();
+}
+
+@media (min-width: @tablet-width) {
+  .about {
+    width: 708px;
+}
+
+  .about__caption {
+    font-size: 60px;
+    line-height: 60px;
+    color: @black;
+    text-align: left;
+    background-color: @white;
+  }
+
+  .about__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    color:@black;
+    text-align: left;
+    background-color: @white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    width: 1220px;
+  }
 }

@@ -1,3 +1,8 @@
+.extra {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .extra__caption {
   .base-text(24px, 24px);
   color: @black;
@@ -39,3 +44,16 @@
   font-weight: 400;
   background-image: url("img/gift-photo-mobile@1x.jpg");
 }
+
+@media (min-width: @tablet-width) {
+  .extra {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra {
+    width: 1220px;
+  }
+}
+
