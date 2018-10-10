@@ -1,14 +1,15 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  width: 320px;
-  min-height: 265px;
+  width: @mobile-width;
+  height: 265px;
   margin: 0 auto;
 }
 
 .page-header__logo {
   width: 271px;
   height: 65px;
+  padding: 10px 105px 15px 20px;
 }
 
 .page-header__toggle {
@@ -17,15 +18,33 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    flex-direction: row;
-    width: 708px;
+    width: auto;
     height: 94px;
+    margin: 0;
+  }
+
+  .page-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  .page-header__nav {
+    width: 475px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
+    height: 120px;
+  }
+
+  .page-header__wrapper {
     width: 1220px;
-    height: 155px;
+  }
+
+  .page-header__nav {
+    width: 830px;
   }
 }

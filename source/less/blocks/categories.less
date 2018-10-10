@@ -1,9 +1,11 @@
 .categories {
-  width: 320px;
+  .reset-indents();
+  width: @mobile-width;
   margin: 0 auto;
 }
 
 .categories__list {
+  .reset-indents();
   list-style: none;
 }
 
@@ -32,6 +34,8 @@
   .base-text(16px, 16px);
   color: @black;
   text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 @media (min-width: @tablet-width) {

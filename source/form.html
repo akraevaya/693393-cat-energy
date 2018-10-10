@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Cat Energy: подбор программы</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="271" height="65" alt="Cat Energy - функциональное питание для котов">
       </a>
-      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <!-- <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button> -->
       <nav class="page-header__nav main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -104,10 +105,13 @@
             <label class="form__label" for="checkbox-button-4">Витамины</label>
           </div>
         </div>
-        <input class="form__button" type="submit" name="submit-button" id="submit-form" value="Отправить заявку">
-        <label class="visually-hidden" for="submit-form">Отправить заявку</label>
+
+        <div class="form__fieldset form__fieldset--submit">
+          <input class="form__button" type="submit" name="submit-button" id="submit-form" value="Отправить заявку">
+          <label class="visually-hidden" for="submit-form">Отправить заявку</label>
+          <p class="form__attention">* — Обязательные поля</p>
+        </div>
       </form>
-      <p class="page-main__attention">* — Обязательные поля</p>
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>

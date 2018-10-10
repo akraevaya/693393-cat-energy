@@ -1,17 +1,19 @@
 .page-main {
-  width: 320px;
+  width: @mobile-width;
   margin: 0 auto;
   padding: 0;
 }
 
 .page-main__caption {
   .caption();
-  margin: 0 auto;
+  margin-left: 20px;
+  margin-top: 50px;
 }
 
 .page-main__description {
   .base-text();
-  margin: 0 auto;
+  width: 230px;
+  margin-left: 20px;
   color: @black;
   font-weight: 400;
   text-transform: uppercase;
@@ -19,15 +21,15 @@
 
 .page-main__form {
   .reset-indents();
-}
-
-.page-main__attention {
-  .info-text();
-  .base-text(14px, 16px);
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
   .page-main {
     width: auto;
+  }
+
+  .page-main__description {
+    margin-left: 70px;
   }
 }

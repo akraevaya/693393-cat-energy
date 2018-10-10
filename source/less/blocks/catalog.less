@@ -1,5 +1,5 @@
 .catalog {
-  width: 320px;
+  width: @mobile-width;
   margin: 0 auto;
 }
 
@@ -13,7 +13,9 @@
 
 .catalog__item {
   .reset-indents();
-  width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
 }
 
 .catalog__image {
@@ -23,9 +25,15 @@
 
 .catalog__name {
   .base-text(16px, 20px);
+  width: 80px;
   color: @black;
   font-weight: 400;
   text-transform: uppercase;
+
+  &--show-all {
+    width: auto;;
+    text-align: center;
+  }
 }
 
 .catalog__table,
@@ -36,6 +44,7 @@
 
 .catalog__button {
   .green-button();
+  width: 280px;
 
   &--show-all {
     color: @text-darkgray;
@@ -50,6 +59,22 @@
 @media (min-width: @tablet-width) {
   .catalog {
     width: 708px;
+  }
+
+  .catalog__item {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 324px;
+    margin: 0;
+  }
+
+  .catalog__name {
+    width: 120px;
+    text-align: center;
+  }
+
+  .catalog__button {
+    width: 250px;
   }
 }
 

@@ -1,5 +1,5 @@
 .form {
-  width: 320px;
+  width: @mobile-width;
   margin: 0 auto;
 }
 
@@ -11,8 +11,15 @@
 
 .form__caption {
   .base-text(24px, 24px);
+  width: 185px;
+  margin-left: 20px;
   color: @black;
   font-weight: 400;
+}
+
+.form__item {
+  display: flex;
+  margin: 20px;
 }
 
 .form__label,
@@ -27,16 +34,42 @@
 
 .form__field,
 .form__textarea {
+  margin-left: 20px;
   color: @text-darkgray;
+}
+
+.form__textarea {
+  width: 280px;
+  height: 150px;
 }
 
 .form__button {
   .green-button();
+  width: 280px;
+}
+
+.form__attention {
+  .info-text();
+  .base-text(14px, 16px);
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
   .form {
     width: 708px;
+  }
+
+  .form__caption {
+    width: 545px;
+  }
+
+  .form__fieldset {
+    width: 708px;
+
+    &--extra {
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
   }
 }
 

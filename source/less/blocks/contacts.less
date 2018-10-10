@@ -1,5 +1,5 @@
 .contacts {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
   padding: 20px;
   font-weight: 400;
@@ -12,6 +12,7 @@
 }
 
 .contacts__welcome {
+  .reset-indents();
   .base-text(16px, 20px);
   color: @black;
   text-transform: uppercase;
@@ -19,6 +20,7 @@
 }
 
 .contacts__address {
+  .reset-indents();
   .base-text(14px, 20px);
   font-family: "Arial", sans-serif;
   color: @text-darkgray;
@@ -37,7 +39,7 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    width: 100%;
+    width: 1220px;
   }
 
   .contacts__wrapper {
