@@ -1,14 +1,18 @@
 .contacts {
   width: 280px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0;
   font-weight: 400;
 }
 
 .contacts__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 280px;
   min-height: 115px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .contacts__welcome {
@@ -34,6 +38,11 @@
 @media (min-width: @tablet-width) {
   .contacts {
     width: 708px;
+    background-color: @bg-lightgray;
+  }
+
+  .contacts__wrapper {
+    width: 630px;
   }
 }
 

@@ -1,33 +1,39 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  width: @mobile-width;
+  width: 280px;
   height: 265px;
   margin: 0 auto;
+  padding: 0;
+}
+
+.page-header__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .page-header__logo {
   width: 271px;
   height: 65px;
-  padding: 10px 105px 15px 20px;
+  margin-top: 11px;
 }
 
 .page-header__toggle {
+  display: none;
   height: 66px;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
-    width: auto;
+    width: 708px;
     height: 94px;
-    margin: 0;
   }
 
   .page-header__wrapper {
     display: flex;
     justify-content: space-between;
     width: 708px;
-    margin: 0 auto;
   }
 
   .page-header__nav {
@@ -37,6 +43,7 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
+    width: 1220px;
     height: 120px;
   }
 

@@ -1,6 +1,7 @@
 .advantages {
   width: @mobile-width;
   margin: 0 auto;
+  padding: 0;
 }
 
 .advantages__list {
@@ -8,18 +9,12 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding: 20px;
+  // padding: 20px;
   list-style: none;
-}
-
-.advantages__item {
-  width: 280px;
 }
 
 .advantages__caption {
   .caption();
-  margin: 0 auto;
-  margin-left: 40px;
 }
 
 .advantages__description {
@@ -40,6 +35,10 @@
 
   .advantages__item {
     width: 245px;
+  }
+
+  .advantages__description {
+    width: 225px;
   }
 }
 

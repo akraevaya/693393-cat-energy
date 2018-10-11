@@ -1,6 +1,7 @@
 .form {
   width: @mobile-width;
   margin: 0 auto;
+  padding: 0;
 }
 
 .form__fieldset {
@@ -19,7 +20,7 @@
 
 .form__item {
   display: flex;
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 .form__label,
@@ -32,8 +33,7 @@
   text-transform: uppercase;
 }
 
-.form__field,
-.form__textarea {
+.form__field {
   margin-left: 20px;
   color: @text-darkgray;
 }
@@ -51,6 +51,7 @@
 .form__attention {
   .info-text();
   .base-text(14px, 16px);
+  width: 160px;
   text-align: center;
 }
 
@@ -66,15 +67,50 @@
   .form__fieldset {
     width: 708px;
 
-    &--extra {
+    &--submit {
       flex-direction: row;
-      flex-wrap: wrap;
+      width: 538px;
     }
+  }
+
+  .form__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 538px;
+  }
+
+  .form__attention {
+    width: 190px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form {
+    width: 1220px;
+  }
+
+  .form__container {
+    display: flex;
+  }
+
+  .form__caption {
+    width: 1220px;
+  }
+
+  .form__fieldset {
+    width: 1220px;
+
+    &--extra {
+      flex-direction: row;
+    }
+  }
+
+  .form__wrapper {
+    width: 570px;
+  }
+
+  .form__textarea {
     width: 1220px;
   }
 }

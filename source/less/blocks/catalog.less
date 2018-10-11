@@ -1,6 +1,7 @@
 .catalog {
   width: @mobile-width;
   margin: 0 auto;
+  padding: 0;
 }
 
 .catalog__list {
@@ -15,7 +16,6 @@
   .reset-indents();
   display: flex;
   flex-wrap: wrap;
-  margin: 20px;
 }
 
 .catalog__image {
@@ -65,7 +65,10 @@
     flex-direction: column;
     justify-content: space-between;
     width: 324px;
-    margin: 0;
+  }
+
+  .catalog__wrapper {
+    margin: 0 auto;
   }
 
   .catalog__name {
@@ -74,7 +77,8 @@
   }
 
   .catalog__button {
-    width: 250px;
+    width: 247px;
+    margin: 0 auto;
   }
 }
 

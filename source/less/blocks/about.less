@@ -1,7 +1,8 @@
 .about {
-  width: 248px;
+  width: 280px;
   margin: 0 auto;
-  padding: 30px 36px 22px 36px;
+  margin-bottom: 20px;
+  padding: 0;
   background-image: url("img/index-background-mobile@1x.jpg");
   background-size: contain;
 }
@@ -25,8 +26,9 @@
   background-color: @green;
 }
 
-.about-button {
+.about__button {
   .green-button();
+  width: 280px;
 }
 
 @media (min-width: @tablet-width) {
@@ -35,6 +37,7 @@
   }
 
   .about__caption {
+    width: 427px;
     margin-left: 120px;
     font-size: 60px;
     line-height: 60px;
@@ -50,6 +53,11 @@
     color: @black;
     text-align: left;
     background-color: @white;
+  }
+
+  .about__button {
+    width: 245px;
+    margin-left: 120px;
   }
 }
 
