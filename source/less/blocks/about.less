@@ -1,7 +1,10 @@
 .about {
-  .reset-indents();
-  background-color: @green;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0;
   background-image: url("img/index-background-mobile@1x.jpg");
+  background-size: contain;
 }
 
 .about__caption {
@@ -10,6 +13,7 @@
   font-weight: 400;
   color: @white;
   text-align: center;
+  background-color: @green;
 }
 
 .about__slogan {
@@ -19,8 +23,46 @@
   color: @white;
   text-transform: uppercase;
   text-align: center;
+  background-color: @green;
 }
 
-.about-button {
+.about__button {
   .green-button();
+  width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .about {
+    width: 708px;
+  }
+
+  .about__caption {
+    width: 427px;
+    margin-left: 120px;
+    font-size: 60px;
+    line-height: 60px;
+    color: @black;
+    text-align: left;
+    background-color: @white;
+  }
+
+  .about__slogan {
+    margin-left: 120px;
+    font-size: 20px;
+    line-height: 20px;
+    color: @black;
+    text-align: left;
+    background-color: @white;
+  }
+
+  .about__button {
+    width: 245px;
+    margin-left: 120px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    width: 1220px;
+  }
 }

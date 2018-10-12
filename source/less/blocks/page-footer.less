@@ -1,11 +1,37 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px;
+  height: 236px;
   margin: 0 auto;
   padding: 0;
   background-color: @bg-lightgray;
 }
 
+.page-footer__logo {
+  text-align: center;
+}
+
 .page-footer__social,
 .page-footer__bottom {
   .reset-indents();
+  display: flex;
+  justify-content: space-between;
   list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    align-items: center;
+    width: 708px;
+    height: 150px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: 1220px;
+  }
 }

@@ -1,14 +1,19 @@
 .page-main {
+  width: 280px;
   margin: 0 auto;
   padding: 0;
 }
 
 .page-main__caption {
   .caption();
+  margin-left: 20px;
+  margin-top: 50px;
 }
 
 .page-main__description {
   .base-text();
+  width: 230px;
+  margin-left: 20px;
   color: @black;
   font-weight: 400;
   text-transform: uppercase;
@@ -16,9 +21,21 @@
 
 .page-main__form {
   .reset-indents();
+  margin: 0 auto;
 }
 
-.page-main__attention {
-  .info-text();
-  .base-text(14px, 16px);
+@media (min-width: @tablet-width) {
+  .page-main {
+    width: 708px;
+  }
+
+  .page-main__description {
+    margin-left: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    width: 1220px;
+  }
 }

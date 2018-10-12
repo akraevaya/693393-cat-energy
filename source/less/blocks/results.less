@@ -1,8 +1,9 @@
 .results {
-  .reset-indents();
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
   background-color: @bg-lightgray;
 }
-
 
 .results__caption {
   .caption();
@@ -11,6 +12,11 @@
 .results__description {
   .info-text();
   .base-text();
+}
+
+.results__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .results__stats,
@@ -29,4 +35,28 @@
 
 .results__toggle {
   .reset-indents();
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .results {
+    width: 708px;
+  }
+
+  .results__wrapper {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .results {
+    width: 1220px;
+  }
+
+  .results__wrapper {
+    flex-direction: column;
+  }
 }

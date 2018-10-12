@@ -1,3 +1,9 @@
+.extra {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .extra__caption {
   .base-text(24px, 24px);
   color: @black;
@@ -11,6 +17,10 @@
 
 .extra__item {
   .reset-indents();
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .extra__name {
@@ -27,6 +37,7 @@
 
 .extra__button {
   .green-button();
+  width: 280px;
 }
 
 .extra__order-all {
@@ -34,8 +45,51 @@
   display: block;
   width: 280px;
   height: 289px;
+  margin-top: auto;
   font-family: "Arial", sans-serif;
   color: @white;
   font-weight: 400;
+  text-align: center;
+  background-color: @green;
   background-image: url("img/gift-photo-mobile@1x.jpg");
+}
+
+@media (min-width: @tablet-width) {
+  .extra {
+    width: 708px;
+  }
+
+  .extra__caption {
+    margin-left: 40px;
+  }
+
+  .extra__wrapper {
+    width: 633px;
+    margin: 0 auto;
+  }
+
+  .extra__item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .extra__button {
+    width: 634px;
+  }
+
+  .extra__order-all {
+    width: 633px;
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra {
+    width: 1220px;
+  }
+
+  .extra-wrapper {
+    display: flex;
+  }
 }
