@@ -1,17 +1,20 @@
 .stats-list {
   .reset-indents();
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .stats-list__item {
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
 }
 
 .stats-list__fact {
   .info-text();
   .base-text(12px, 12px);
+  width: 65px;
+  text-align: center;
 }
 
 .stats-list__number {

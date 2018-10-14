@@ -1,44 +1,61 @@
 .about {
-  width: 280px;
+  position: relative;
+  width: @mobile-width;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 0;
-  background-image: url("img/index-background-mobile@1x.jpg");
+  // background-color: @green;
+  background-image: url("/img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
   background-size: contain;
 }
 
 .about__caption {
+  .reset-indents();
+  padding-top: 25px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   color: @white;
   text-align: center;
-  background-color: @green;
 }
 
 .about__slogan {
+  .reset-indents();
+  display: block;
+  padding-top: 25px;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
   color: @white;
   text-transform: uppercase;
   text-align: center;
-  background-color: @green;
+}
+
+.about__can {
+  .reset-indents();
+  width: 280px;
+  height: 270px;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 .about__button {
   .green-button();
   width: 280px;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
   .about {
+    position: relative;
     width: 708px;
+    margin-bottom: 525px;
   }
 
   .about__caption {
     width: 427px;
-    margin-left: 120px;
+    margin-left: 85px;
     font-size: 60px;
     line-height: 60px;
     color: @black;
@@ -47,7 +64,7 @@
   }
 
   .about__slogan {
-    margin-left: 120px;
+    margin-left: 85px;
     font-size: 20px;
     line-height: 20px;
     color: @black;
@@ -55,9 +72,18 @@
     background-color: @white;
   }
 
+  .about__can {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+  }
+
   .about__button {
     width: 245px;
-    margin-left: 120px;
+    margin-left: 90px;
+    margin-top: 35px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 

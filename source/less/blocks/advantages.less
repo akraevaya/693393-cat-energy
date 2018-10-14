@@ -1,11 +1,13 @@
 .advantages {
   width: 280px;
   margin: 0 auto;
+  margin-top: -5px;
   padding: 0;
 }
 
 .advantages__list {
   .reset-indents();
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -13,12 +15,16 @@
 }
 
 .advantages__caption {
+  .reset-indents();
   .caption();
 }
 
 .advantages__description {
+  .reset-indents();
   .info-text();
   .base-text();
+  padding-left: 80px;
+  padding-bottom: 26px;
 }
 
 @media (min-width: @tablet-width) {
