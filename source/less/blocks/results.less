@@ -85,10 +85,26 @@
 
 @media (min-width: @desktop-width) {
   .results {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     width: 1220px;
+    min-height: 600px;
+  }
+
+  .results__description {
+    width: 435px;
   }
 
   .results__wrapper {
     flex-direction: column;
+    justify-content: flex-start;
+    width: 368px;
+    margin: 0;
+  }
+
+  .results__sum {
+    width: 325px;
+    text-align: left;
   }
 }
