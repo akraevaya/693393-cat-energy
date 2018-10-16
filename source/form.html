@@ -11,8 +11,8 @@
       <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="271" height="65" alt="Cat Energy - функциональное питание для котов">
       </a>
-      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <nav class="page-header__nav main-nav">
+      <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
@@ -161,6 +161,23 @@
         </li>
       </ul>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
 
   </body>
 </html>
