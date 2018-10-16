@@ -22,6 +22,7 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 23px;
+  color: @text-darkgray;
 }
 
 .results__wrapper {
@@ -50,11 +51,35 @@
 
 @media (min-width: @tablet-width) {
   .results {
-    width: 708px;
+    width: 768px;
+    background-color: @white;
+  }
+
+  .results__caption {
+    font-size: 60px;
+    padding: 0;
+    padding-left: 30px;
+  }
+
+  .results__description {
+    .base-text(16px, 24px);
+    width: 680px;
+    margin-left: 30px;
+    margin-top: 65px;
+    margin-bottom: 65px;
+    padding: 0;
   }
 
   .results__wrapper {
     flex-direction: row;
+    justify-content: space-between;
+    width: 708px;
+  }
+
+  .results__sum {
+    width: 188px;
+    font-size: 20px;
+    text-align: right;
   }
 }
 

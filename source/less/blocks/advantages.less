@@ -29,21 +29,46 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
+    position: relative;
     width: 708px;
+    min-height: 505px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 23px;
+      left: -30px;
+      width: 768px;
+      height: 1px;
+      background-color: #e6e6e6;
+    }
   }
 
   .advantages__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 628px;
+    margin-top: 40px;
   }
 
   .advantages__item {
-    width: 245px;
+    padding-top: 115px;
+    padding-bottom: 75px;
+  }
+
+  .advantages__caption {
+    font-size: 60px;
+    margin-top: 50px;
   }
 
   .advantages__description {
-    width: 225px;
+    .base-text(16px, 24px);
+    width: 245px;
+    min-height: 125px;
+    padding: 0;
   }
 }
 

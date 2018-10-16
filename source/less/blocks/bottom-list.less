@@ -2,11 +2,32 @@
   .reset-indents();
   width: 280px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom-list__item {
+  margin-top: 8px;
+
+  &--logo {
+    margin-top: 14px;
+  }
 }
 
 .bottom-list__link {
   .info-text();
   .base-text(16px, 16px);
+  display: block;
   text-decoration: none;
+
+  &--logo {
+    font-size: 0;
+    margin-right: -8px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .bottom-list {
+    width: 162px;
+  }
 }

@@ -23,3 +23,22 @@
   font-weight: 400;
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .stats-list {
+    width: 368px;
+  }
+
+  .stats-list__item {
+    width: 162px;
+  }
+
+  .stats-list__fact {
+    .base-text(14px, 14px);
+    width: 130px;
+  }
+
+  .stats-list__number {
+    .base-text(30px, 37px);
+  }
+}
