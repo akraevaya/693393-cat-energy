@@ -13,7 +13,6 @@
   padding-bottom: 13px;
   color: @black;
   font-weight: 400;
-  // border-bottom: 1px solid #d9d9d9;
 
   &::after {
     content: "";
@@ -112,30 +111,101 @@
 @media (min-width: @tablet-width) {
   .extra {
     width: 708px;
+    margin: 0 auto;
   }
 
   .extra__caption {
-    margin-left: 40px;
+    margin-top: 70px;
+    margin-left: 38px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: -70px;
+      width: 30px;
+      height: 3px;
+      background-color: @green;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: -30px;
+      width: 310px;
+      height: 3px;
+      background-color: @green;
+    }
   }
 
   .extra__wrapper {
+    width: 708px;
+    margin: 0 auto;
+    margin-top: 68px;
+  }
+
+  .extra__list {
     width: 633px;
     margin: 0 auto;
   }
 
   .extra__item {
-    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
+    height: 138px;
+  }
+
+  .extra__name {
+    .base-text(20px, 20px);
+    margin-top: 10px;
+  }
+
+  .extra__table {
+    .base-text(16px, 16px);
+    width: 232px;
+  }
+
+  .extra__data {
+    text-align: right;
+  }
+
+  .extra-value {
+    width: 95px;
   }
 
   .extra__button {
     width: 634px;
+    margin: 0;
   }
 
   .extra__order-all {
-    width: 633px;
-    margin-top: 70px;
+    width: 708px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 68px;
+    margin-bottom: 75px;
+    background-color: @green;
+    background-image: url("/img/gift-photo-tablet@1x.jpg");
+    background-repeat: no-repeat;
+
+    &::before {
+      top: 63px;
+      left: 90px;
+    }
+  }
+
+  .extra__order-all span {
+    width: 170px;
+    margin: 0;
+    padding: 0;
+    padding-left: 422px;
+    padding-top: 70px;
+    text-align: left;
   }
 }
 
