@@ -16,7 +16,8 @@
 
 @media (min-width: @tablet-width) {
   .compare-list {
-    min-height: 580px;
+    flex-direction: row;
+    // min-height: 580px;
     background-color: @bg-lightgray;
     background-position: bottom center;
   }
@@ -25,5 +26,16 @@
 @media (min-width: @desktop-width) {
   .compare-list {
     width: 610px;
+    height: 250px;
+    background-color: @white;
+  }
+
+  .compare-list__item {
+    min-height: 10px;
+    padding: 0;
+  }
+
+  .compare-list__image {
+    display: none;
   }
 }

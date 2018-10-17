@@ -88,12 +88,22 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-content: space-between;
     width: 1220px;
-    min-height: 600px;
+    height: 600px;
+    margin-top: 0;
+  }
+
+  .results__caption {
+    width: 610px;
+    margin-top: 10px;
+    padding: 0;
   }
 
   .results__description {
     width: 435px;
+    margin: 0;
+    margin-top: 147px;
   }
 
   .results__wrapper {
@@ -104,7 +114,19 @@
   }
 
   .results__sum {
+    display: flex;
+    justify-content: space-between;
     width: 325px;
+    margin-top: 38px;
+    padding: 0;
     text-align: left;
+  }
+
+  .results__cat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 585px;
   }
 }

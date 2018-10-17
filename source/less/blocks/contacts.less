@@ -78,10 +78,31 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    width: 1220px;
+    position: relative;
+    width: @desktop-width;
   }
 
   .contacts__wrapper {
-    width: 570px;
+    position: absolute;
+    top: 98px;
+    left: 40px;
+    width: 410px;
+    padding-left: 35px;
+    padding-right: 25px;
+    background-color: @white;
+  }
+
+  .contacts__welcome {
+    width: 165px;
+  }
+
+  .contacts__address {
+    text-align: left;
+  }
+
+  .contacts__map {
+    width: @desktop-width;
+    height: 402px;
+    background-image: url("/img/bg-map-desktop@1x.png");
   }
 }
