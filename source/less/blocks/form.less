@@ -8,19 +8,91 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
+  &--user {
+    min-height: 188px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  &--mission {
+    justify-content: space-between;
+    align-items: baseline;
+    min-height: 114px;
+    padding: 22px;
+    border-bottom: 1px solid #d9d9d9;
+  }
 }
 
 .form__caption {
   .base-text(24px, 24px);
+  position: relative;
   width: 185px;
-  margin-left: 20px;
   color: @black;
   font-weight: 400;
+  font-stretch: ultra-condensed;
+
+  &--contacts {
+    width: 200px;
+    margin-bottom: 35px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: -100px;
+      width: 90px;
+      height: 3px;
+      background-color: @green;
+    }
+  }
+
+  &--comment {
+    margin-top: 10px;
+    margin-bottom: 35px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: -115px;
+      width: 150px;
+      height: 3px;
+      background-color: @green;
+    }
+  }
+
+  &--extra {
+    margin: 0;
+    margin-top: 33px;
+    margin-bottom: 37px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: -115px;
+      width: 130px;
+      height: 3px;
+      background-color: @green;
+    }
+  }
 }
 
 .form__item {
   display: flex;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &--mission {
+    justify-content: flex-start;
+  }
+
+  &--extra {
+    justify-content: flex-start;
+    margin-bottom: 24px;
+    margin-left: 24px;
+  }
 }
 
 .form__label,
@@ -30,28 +102,57 @@
   max-width: 280px;
   color: #222222;
   font-weight: 400;
+  font-stretch: ultra-condensed;
   text-transform: uppercase;
 }
 
 .form__field {
-  margin-left: 20px;
+  height: 38px;
+  padding-left: 16px;
   color: @text-darkgray;
+
+  &--name {
+    width: 210px;
+  }
+
+  &--weight {
+    width: 184px;
+  }
+
+  &--age {
+    width: 152px;
+  }
+
+  &--email {
+    width: 200px;
+  }
+
+  &--phone {
+    width: 184px;
+  }
 }
 
 .form__textarea {
-  width: 280px;
-  height: 150px;
+  width: 245px;
+  height: 115px;
+  padding: 15px;
 }
 
 .form__button {
   .green-button();
   width: 280px;
+  height: 40px;
+  margin-top: 15px;
+  padding-bottom: 10px;
 }
 
 .form__attention {
   .info-text();
   .base-text(14px, 16px);
   width: 160px;
+  margin: 0 auto;
+  margin-top: 21px;
+  margin-bottom: 33px;
   text-align: center;
 }
 
