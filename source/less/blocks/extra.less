@@ -212,9 +212,78 @@
 @media (min-width: @desktop-width) {
   .extra {
     width: 1220px;
+    margin-bottom: 75px;
   }
 
-  .extra-wrapper {
+  .extra__caption {
+    margin: 0;
+    margin-top: 78px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: -110px;
+      width: 70px;
+      height: 3px;
+      background-color: @green;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: -140px;
+      width: 900px;
+      height: 3px;
+      background-color: @green;
+    }
+  }
+
+  .extra__wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1220px;
+  }
+
+  .extra__list {
+    width: 895px;
+    margin: 0;
+  }
+
+  .extra__item {
+    width: 895px;
+    height: 72px;
+  }
+
+  .extra__table {
+    width: 285px;
+  }
+
+  .extra__data {
+    text-align: left;
+  }
+
+  .extra__value {
+    text-align: right;
+  }
+
+  .extra__button {
+    width: 245px;
+  }
+
+  .extra__order-all {
+    width: 245px;
+    height: 290px;
+    margin: 0;
+    background-image: url("/img/gift-photo-desktop@1x.jpg");
+  }
+
+  .extra__order-all span {
+    padding: 0;
+    padding-top: 185px;
+    padding-left: 40px;
+    text-align: center;
   }
 }
