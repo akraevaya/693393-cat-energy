@@ -99,7 +99,6 @@
 .form__field,
 .form__textarea {
   .base-text(16px, 18px);
-  // max-width: 280px;
   color: #222222;
   font-weight: 400;
   font-stretch: ultra-condensed;
@@ -242,8 +241,6 @@
     }
   }
 
-  // ------
-
   .form__fieldset {
     width: 630px;
     margin: 0 auto;
@@ -295,7 +292,6 @@
   .form__field {
     height: 50px;
     padding-left: 20px;
-    color: @text-darkgray;
 
     &--name {
       width: 547px;
@@ -330,7 +326,6 @@
     .base-text(20px, 20px);
     width: 283px;
     height: 52px;
-    // margin-top: 15px;
     padding-bottom: 10px;
   }
 
@@ -343,13 +338,10 @@
     text-align: left;
   }
 
-  // ---------
-
   .form__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    // width: 538px;
   }
 
   .form__item {
@@ -367,7 +359,6 @@
       margin-left: 255px;
     }
   }
-
 }
 
 @media (min-width: @desktop-width) {
@@ -379,23 +370,196 @@
     display: flex;
   }
 
-  .form__caption {
-    width: 1220px;
-  }
-
   .form__fieldset {
-    width: 1220px;
+    &--user {
+      margin-top: 26px;
+    }
+
+    &--mission {
+      width: 510px;
+      height: 146px;
+      margin: 0;
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+
+    &--contacts {
+      flex-direction: row;
+      width: 1220px;
+      margin-top: 38px;
+    }
+
+    &--comment {
+      margin: 0;
+      margin-top: 40px;
+    }
 
     &--extra {
       flex-direction: row;
+      width: 1220px;
+      margin: 0;
+      margin-top: 30px;
+    }
+
+    &--submit {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      width: 1220px;
+      margin-top: 55px;
+      margin-bottom: 85px;
+    }
+  }
+
+  .form__fieldset--user .form__item {
+    justify-content: flex-start;
+  }
+
+  .form__field {
+    margin-left: 15px;
+
+    &--name {
+      width: 484px;
+    }
+
+    &--weight {
+      width: 455px;
+    }
+
+    &--age {
+      width: 416px;
+    }
+
+    &--email {
+      width: 466px;
+      margin-right: 78px;
+    }
+
+    &--phone {
+      width: 452px;
+    }
+  }
+
+  .form__textarea {
+    width: 1180px;
+    height: 134px;
+  }
+
+  .form__button {
+    width: 568px;
+  }
+
+  .form__attention {
+    .base-text(16px, 16px);
+    margin: 0;
+    margin-left: 83px;
+    margin-top: 15px;
+  }
+
+  .form__caption {
+    width: 1220px;
+
+    &--contacts {
+      margin-top: 15px;
+      margin-bottom: 70px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -110px;
+        width: 70px;
+        height: 3px;
+        background-color: @green;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: -110px;
+        width: 770px;
+        height: 3px;
+        background-color: @green;
+      }
+    }
+
+    &--comment {
+      margin-top: 10px;
+      margin-bottom: 35px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -110px;
+        width: 70px;
+        height: 3px;
+        background-color: @green;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: -110px;
+        width: 1100px;
+        height: 3px;
+        background-color: @green;
+      }
+    }
+
+    &--extra {
+      margin: 0;
+      margin-top: 38px;
+      margin-bottom: 67px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -110px;
+        width: 70px;
+        height: 3px;
+        background-color: @green;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: -110px;
+        width: 1070px;
+        height: 3px;
+        background-color: @green;
+      }
     }
   }
 
   .form__wrapper {
-    width: 570px;
+    width: 610px;
+    justify-content: flex-start;
   }
 
-  .form__textarea {
-    width: 1220px;
+  .form__item {
+    &--extra {
+      margin: 0;
+    }
+
+    &--sugar {
+      margin-left: 40px;
+    }
+
+    &--water {
+      margin-left: 140px;
+    }
+
+    &--milk {
+      margin-left: 80px;
+    }
+
+    &--vitamins {
+      margin-left: 240px;
+    }
   }
 }
