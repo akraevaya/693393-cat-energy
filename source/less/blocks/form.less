@@ -99,7 +99,7 @@
 .form__field,
 .form__textarea {
   .base-text(16px, 18px);
-  max-width: 280px;
+  // max-width: 280px;
   color: #222222;
   font-weight: 400;
   font-stretch: ultra-condensed;
@@ -162,29 +162,212 @@
   }
 
   .form__caption {
-    width: 545px;
+    .base-text(36px, 36px);
+    font-stretch: condensed;
+
+    &--contacts {
+      width: 575px;
+      margin-bottom: 70px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -70px;
+        width: 30px;
+        height: 3px;
+        background-color: @green;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: -123px;
+        width: 120px;
+        height: 3px;
+        background-color: @green;
+      }
+    }
+
+    &--comment {
+      margin-top: 10px;
+      margin-bottom: 35px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -70px;
+        width: 30px;
+        height: 3px;
+        background-color: @green;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: -512px;
+        width: 480px;
+        height: 3px;
+        background-color: @green;
+      }
+    }
+
+    &--extra {
+      margin: 0;
+      margin-top: 33px;
+      margin-bottom: 67px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -70px;
+        width: 30px;
+        height: 3px;
+        background-color: @green;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: -510px;
+        width: 445px;
+        height: 3px;
+        background-color: @green;
+      }
+    }
   }
+
+  // ------
 
   .form__fieldset {
     width: 630px;
     margin: 0 auto;
+    border: none;
+
+    &--user {
+      margin-top: 64px;
+    }
+
+    &--mission {
+      width: 570px;
+      min-height: 146px;
+      margin-top: 55px;
+      padding: 25px 30px;
+      border: 1px solid #d9d9d9;
+    }
+
+    &--contacts {
+      margin-top: 38px;
+    }
+
+    &--comment {
+      margin-top: 40px;
+    }
+
+    &--extra {
+      margin-top: 30px;
+    }
 
     &--submit {
       flex-direction: row;
-      width: 538px;
+      align-items: center;
+      justify-content: space-between;
+      width: 630px;
+      margin-bottom: 75px;
     }
   }
+
+  .form__radio {
+    margin-right: 40px;
+  }
+
+  .form__label,
+  .form__field,
+  .form__textarea {
+    .base-text(20px, 20px);
+  }
+
+  .form__field {
+    height: 50px;
+    padding-left: 20px;
+    color: @text-darkgray;
+
+    &--name {
+      width: 547px;
+    }
+
+    &--weight {
+      width: 516px;
+    }
+
+    &--age {
+      width: 475px;
+    }
+
+    &--email {
+      width: 520px;
+    }
+
+    &--phone {
+      width: 500px;
+    }
+  }
+
+  .form__textarea {
+    width: 585px;
+    height: 134px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  .form__button {
+    .base-text(20px, 20px);
+    width: 283px;
+    height: 52px;
+    // margin-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  .form__attention {
+    .base-text(16px, 16px);
+    width: 190px;
+    margin: 0;
+    margin-right: 95px;
+    margin-top: 15px;
+    text-align: left;
+  }
+
+  // ---------
 
   .form__wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 538px;
+    justify-content: flex-start;
+    // width: 538px;
   }
 
-  .form__attention {
-    width: 190px;
+  .form__item {
+    &--extra {
+      margin: 0;
+      margin-bottom: 50px;
+      margin-left: 40px;
+    }
+
+    &--water {
+      margin-left: 155px;
+    }
+
+    &--vitamins {
+      margin-left: 255px;
+    }
   }
+
 }
 
 @media (min-width: @desktop-width) {
