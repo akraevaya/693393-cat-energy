@@ -64,23 +64,46 @@
     align-content: center;
     width: 628px;
     margin-top: 40px;
+    counter-reset: itemCounter;
   }
 
   .advantages__item {
     padding-top: 115px;
     padding-bottom: 75px;
+    font-size: 280px;
+    counter-increment: itemCounter;
+
+    &::before {
+      top: 2px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      content: counter(itemCounter);
+      position: absolute;
+      top: 95px;
+      right: -5px;
+      min-width: 134px;
+      height: 281px;
+      color: #e6e6e6;
+      // opacity: 0.4;
+      z-index: 1;
+    }
   }
 
   .advantages__caption {
     font-size: 60px;
-    margin-top: 50px;
+    margin-top: 46px;
   }
 
   .advantages__description {
     .base-text(16px, 24px);
+    position: relative;
     width: 245px;
     min-height: 125px;
     padding: 0;
+    z-index: 10;
   }
 }
 

@@ -78,11 +78,26 @@
     width: 708px;
   }
 
+  .categories__list {
+    padding: 0;
+  }
+
   .categories__caption {
+    position: relative;
     font-size: 36px;
     text-align: left;
     margin-top: 23px;
     padding: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: auto;
+      right: 10px;
+      width: 200px;
+      height: 200px;
+    }
   }
 
   .categories__item:last-child .categories__caption {
@@ -99,6 +114,10 @@
     padding-top: 28px;
     font-size: 16px;
     line-height: 24px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .categories__item:last-child .categories__text {
