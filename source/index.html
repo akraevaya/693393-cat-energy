@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="body-bg">
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
@@ -75,34 +75,39 @@
       <section class="results">
         <h2 class="results__caption">Живой пример</h2>
         <p class="results__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="results__wrapper">
+        <!-- <div class="results__wrapper"> -->
           <ul class="results__stats stats-list">
             <li class="stats-list__item">
+              <p class="stats-list__number">5 кг</p>
               <p class="stats-list__fact">снижение веса</p>
-              <span class="stats-list__number">5 кг</span>
             </li>
             <li class="stats-list__item">
+              <p class="stats-list__number">60 дней</p>
               <p class="stats-list__fact">затрачено времени</p>
-              <span class="stats-list__number">60 дней</span>
+            </li>
+            <li class="stats-list__item stats-list__item--sum">
+              <p class="stats-list__sum">Затраты на питание: <span>15 000 руб.</span></p>
             </li>
           </ul>
-          <p class="results__sum">Затраты на питание: <span>15 000 руб.</span></p>
-        </div>
+        <!-- </div> -->
 
-        <div class="results__cat">
-          <ul class="results__compare compare-list">
-            <li class="compare-list__item compare-list__item--before">
-              <img class="compare-list__image compare-list__image--before" src="img/before-mobile@1x.png" width="311" height="232" alt="Фото кота до">
-            </li>
-            <li class="compare-list__item compare-list__item--after">
-              <img class="compare-list__image compare-list__image--after" src="img/after-mobile@1x.png" width="251" height="240" alt="Фото кота после">
-            </li>
-          </ul>
-
-          <div class="results__toggle toggle-block">
-            <p class="toggle-block__item toggle-block__item--before">Было</p>
-            <p class="toggle-block__item toggle-block__item--scale"></p>
-            <p class="toggle-block__item toggle-block__item--after">Стало</p>
+        <div class="results__slider slider">
+          <div class="slider__wrapper">
+            <ul class="slider__list">
+              <li class="slider__item slider__item--before">
+                <img class="slider__image slider__image--before" src="img/before-mobile@1x.png" width="311" height="232" alt="Фото кота до">
+              </li>
+              <li class="slider__item slider__item--after">
+                <img class="slider__image slider__image--after" src="img/after-mobile@1x.png" width="251" height="240" alt="Фото кота после">
+              </li>
+            </ul>
+            <div class="slider__controls">
+              <button class="slider__button slider__button--before" type="button">Было</button>
+              <div class="slider__scale">
+                <div class="slider__toggle"></div>
+              </div>
+              <button class="slider__button slider__button--after" type="button">Стало</button>
+            </div>
           </div>
         </div>
       </section>

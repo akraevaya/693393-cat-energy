@@ -116,10 +116,6 @@
 @media (min-width: @desktop-width) {
   .main-nav {
     width: 484px;
-
-    &--index {
-      background-color: @green;
-    }
   }
 
   .main-nav__list {
@@ -135,10 +131,10 @@
       line-height: 25px;
       font-weight: 400;
       color: @white;
-
-      &--active {
-        border-bottom: 1px solid @white;
-      }
     }
+  }
+
+  .main-nav__item--active .main-nav__link--index {
+    border-bottom: 1px solid @white;
   }
 }
