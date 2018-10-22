@@ -146,35 +146,51 @@
 
   .categories__item {
     width: 470px;
-    margin-top: 40px;
+    margin-top: 38px;
     padding: 50px;
     padding-bottom: 60px;
   }
 
   .categories__caption {
     text-align: center;
-    margin-left: 20px;
+    margin-top: 25px;
+    margin-left: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: -28px;
+      width: 100px;
+      height: 100px;
+      background-color: @green;
+      border-radius: 50%;
+    }
   }
 
   .categories__item:last-child .categories__caption {
-    margin-left: 60px;
+    margin-left: 73px;
+
+    &::before {
+      left: -70px;
+    }
   }
 
   .categories__item:last-child .categories__text {
     .reset-indents();
     width: 465px;
-    margin-top: 78px;
+    margin-top: 75px;
     margin-left: 2px;
   }
 
   .categories__text {
     width: 465px;
-    margin-top: 48px;
+    margin-top: 46px;
     margin-left: 2px;
   }
 
   .categories__link {
     .reset-indents();
-    margin-top: 30px;
+    margin-top: 32px;
   }
 }

@@ -26,8 +26,6 @@
   bottom: -17px;
   left: 30px;
   width: 65px;
-  // margin: 0 auto;
-  // margin-top: 10px;
   background-color: @bg-lightgray;
 }
 
@@ -94,17 +92,36 @@
 
 @media (min-width: @desktop-width) {
   .stats-list {
-    justify-content: space-between;
-    width: 365px;
-    margin-top: 83px;
+    position: relative;
+    width: 415px;
+    margin: 0;
+    margin-top: 67px;
+    z-index: 5;
+  }
+
+  .stats-list__item {
+    margin-bottom: 30px;
+
+    &--sum {
+      margin: 0;
+      margin-top: 30px;
+    }
   }
 
   .stats-list__sum {
     display: flex;
     justify-content: space-between;
+    align-content: center;
     width: 325px;
-    margin-top: 38px;
     padding: 0;
     text-align: left;
+  }
+
+  .stats-list__fact {
+    background-color: @bg-lightgray;
+  }
+
+  .stats-list__sum span {
+    margin: 0;
   }
 }

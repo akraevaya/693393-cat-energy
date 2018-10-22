@@ -96,29 +96,35 @@
   .contacts {
     position: relative;
     width: @desktop-width;
+    min-height: 400px;
   }
 
   .contacts__wrapper {
     position: absolute;
-    top: 98px;
+    top: 94px;
     left: 40px;
-    width: 410px;
-    padding-left: 35px;
-    padding-right: 25px;
+    display: flex;
+    justify-content: space-around;
+    width: 570px;
+    // padding-left: 35px;
+    // padding-right: 25px;
     background-color: @white;
+    z-index: 5;
   }
 
   .contacts__welcome {
     width: 165px;
+    margin-left: 35px;
   }
 
   .contacts__address {
+    margin-right: 35px;
     text-align: left;
   }
 
   .contacts__map {
     width: @desktop-width;
-    height: 402px;
+    height: 400px;
     background-image: url("../img/bg-map-desktop@1x.png");
   }
 }

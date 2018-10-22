@@ -63,6 +63,7 @@
 
 @media (min-width: @desktop-width) {
   .results {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -70,25 +71,32 @@
     width: 1220px;
     height: 600px;
     margin-top: 0;
+    margin-bottom: 10px;
+    // border: 1px solid blue;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: -40px;
+      width: @desktop-width;
+      height: 462px;
+      background-color: @bg-lightgray;
+    }
   }
 
   .results__caption {
     width: 610px;
-    margin-top: 10px;
+    margin-top: 12px;
     padding: 0;
   }
 
   .results__description {
+    position: relative;
     width: 435px;
     margin: 0;
     margin-top: 147px;
-  }
-
-  .results__wrapper {
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 368px;
-    margin: 0;
+    z-index: 5;
   }
 
   .results__slider {
