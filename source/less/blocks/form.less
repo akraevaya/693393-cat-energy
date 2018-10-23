@@ -117,32 +117,22 @@
 
   &--mission {
     margin-left: 20px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -6px;
-      left: -45px;
-      width: 29px;
-      height: 29px;
-      border: 1px solid #d9d9d9;
-      border-radius: 50%;
-    }
   }
 
   &--extra {
     margin-left: 21px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -5px;
-      left: -45px;
-      width: 29px;
-      height: 29px;
-      border: 1px solid #d9d9d9;
-    }
   }
+}
+
+.form__radio + .form__label--mission::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -45px;
+  width: 29px;
+  height: 29px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
 }
 
 .form__radio:checked + .form__label--mission::before {
@@ -156,6 +146,16 @@
   box-shadow: inset 0 0 0 8px @white;
   border: 1px solid #d9d9d9;
   border-radius: 50%;
+}
+
+.form__checkbox + .form__label--extra::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -45px;
+  width: 29px;
+  height: 29px;
+  border: 1px solid #d9d9d9;
 }
 
 .form__checkbox:checked + .form__label--extra::before {
@@ -173,12 +173,28 @@
   box-sizing: border-box;
   border: 1px solid #e6e6e6;
 
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:active {
+    border: 1px solid @black;
+  }
+
   &--name {
     width: 229px;
+
+    &:invalid {
+      border: 1px solid #ff8282;
+    }
   }
 
   &--weight {
     width: 204px;
+
+    &:invalid {
+      border: 1px solid #ff8282;
+    }
   }
 
   &--age {
@@ -190,6 +206,10 @@
     background-image: url("../img/icon-mail.svg");
     background-repeat: no-repeat;
     background-position: 186px center;
+
+    &:invalid {
+      border: 1px solid #ff8282;
+    }
   }
 
   &--phone {
@@ -197,6 +217,10 @@
     background-image: url("../img/icon-phone.svg");
     background-repeat: no-repeat;
     background-position: 170px center;
+
+    &:invalid {
+      border: 1px solid #ff8282;
+    }
   }
 }
 
@@ -366,30 +390,18 @@
   .form__label {
     &--mission {
       margin-left: 60px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: -10px;
-        left: -60px;
-        width: 39px;
-        height: 39px;
-        border: 1px solid #d9d9d9;
-        border-radius: 50%;
-      }
     }
+  }
 
-    &--extra {
-      &::before {
-        content: "";
-        position: absolute;
-        top: -10px;
-        left: -60px;
-        width: 39px;
-        height: 39px;
-        border: 1px solid #d9d9d9;
-      }
-    }
+  .form__radio + .form__label--mission::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -60px;
+    width: 39px;
+    height: 39px;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
   }
 
   .form__radio:checked + .form__label--mission::before {
@@ -403,6 +415,16 @@
     box-shadow: inset 0 0 0 11px @white;
     border: 1px solid #d9d9d9;
     border-radius: 50%;
+  }
+
+  .form__checkbox + .form__label--extra::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -60px;
+    width: 39px;
+    height: 39px;
+    border: 1px solid #d9d9d9;
   }
 
   .form__checkbox:checked + .form__label--extra::before {

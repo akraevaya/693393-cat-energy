@@ -64,6 +64,18 @@
   }
 }
 
+.main-nav__item--index a[href] {
+  &:hover {
+    color: @white;
+    opacity: 0.8;
+  }
+
+  &:active {
+    color: @white;
+    opacity: 0.4;
+  }
+}
+
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .main-nav__item {
     display: none;

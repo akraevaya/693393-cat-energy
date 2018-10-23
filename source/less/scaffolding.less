@@ -26,6 +26,16 @@ img {
   overflow: hidden;
 }
 
+.green-button() {
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
 @media (min-width: @desktop-width) {
   .body-bg {
     background-image: url("../img/index-background-desktop@1x.jpg");
