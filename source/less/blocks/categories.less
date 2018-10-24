@@ -31,17 +31,38 @@
   &::before {
     content: "";
     position: absolute;
-    top: 5px;
-    left: 0;
+    top: 3px;
+    left: 2px;
     width: 50px;
     height: 50px;
-    background-color: @green;
     border-radius: 50%;
+    background-color: @green;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 10px;
+    width: 35px;
+    height: 49px;
+    background-image: url("../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 5;
   }
 }
 
 .categories__item:last-child .categories__caption {
   padding-left: 45px;
+
+  &::after {
+    top: 15px;
+    left: -7px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/icon-cat-pro.svg");
+  }
 }
 
 .categories__text {
@@ -65,6 +86,7 @@
 
 .categories__link {
   .base-text(16px, 16px);
+  position: relative;
   display: block;
   padding-top: 42px;
   color: @black;
@@ -72,8 +94,23 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 97px;
+    width: 24px;
+    height: 11px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
   &:hover {
     opacity: 0.8;
+
+    &::after {
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+    }
   }
 
   &:active {
@@ -106,10 +143,24 @@
       width: 200px;
       height: 200px;
     }
+
+    &::after {
+      top: 6px;
+      left: 424px;
+      width: 140px;
+      height: 194px;
+    }
   }
 
   .categories__item:last-child .categories__caption {
     padding-left: 0;
+
+    &::after {
+      top: 59px;
+      left: 360px;
+      width: 268px;
+      height: 112px;
+    }
   }
 
   .categories__item {
@@ -118,10 +169,9 @@
   }
 
   .categories__text {
+    .base-text(16px, 24px);
     width: 372px;
     padding-top: 28px;
-    font-size: 16px;
-    line-height: 24px;
 
     &::after {
       display: none;
@@ -137,6 +187,11 @@
     .base-text(20px, 20px);
     margin-top: 13px;
     margin-bottom: 10px;
+
+    &::after {
+      bottom: 3px;
+      left: 130px;
+    }
   }
 }
 
@@ -174,6 +229,13 @@
       background-color: @green;
       border-radius: 50%;
     }
+
+    &::after {
+      top: -35px;
+      left: -14px;
+      width: 70px;
+      height: 97px;
+    }
   }
 
   .categories__item:last-child .categories__caption {
@@ -181,6 +243,13 @@
 
     &::before {
       left: -70px;
+    }
+
+    &::after {
+      top: -7px;
+      left: -90px;
+      width: 134px;
+      height: 56px;
     }
   }
 

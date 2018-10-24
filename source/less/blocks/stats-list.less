@@ -22,9 +22,10 @@
 .stats-list__fact {
   .info-text();
   .base-text(12px, 12px);
+  padding: 0 10px;
   position: absolute;
-  bottom: -17px;
-  left: 30px;
+  bottom: -28px;
+  left: 20px;
   width: 65px;
   background-color: @bg-lightgray;
 }
@@ -73,10 +74,16 @@
 
   .stats-list__fact {
     .base-text(14px, 14px);
-    width: 130px;
-    left: 15px;
+    width: 105px;
+    padding: 0 5px;
+    left: 22px;
     bottom: -20px;
     background-color: @white;
+  }
+
+  .stats-list__item:nth-child(2) .stats-list__fact {
+    width: 130px;
+    left: 10px;
   }
 
   .stats-list__number {

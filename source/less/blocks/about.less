@@ -11,9 +11,8 @@
 
 .about__caption {
   .reset-indents();
+  .base-text(36px, 36px);
   padding-top: 25px;
-  font-size: 36px;
-  line-height: 36px;
   font-weight: 400;
   color: @white;
   text-align: center;
@@ -21,10 +20,9 @@
 
 .about__slogan {
   .reset-indents();
+  .base-text(14px, 14px);
   display: block;
   padding-top: 25px;
-  font-size: 14px;
-  line-height: 14px;
   font-weight: 400;
   color: @white;
   text-transform: uppercase;
@@ -53,20 +51,18 @@
   }
 
   .about__caption {
+    .base-text(60px, 60px);
     width: 450px;
     margin-left: 85px;
     margin-top: 22px;
-    font-size: 60px;
-    line-height: 60px;
     color: @black;
     text-align: left;
   }
 
   .about__slogan {
+    .base-text(20px, 20px);
     margin-left: 85px;
     margin-top: 15px;
-    font-size: 20px;
-    line-height: 20px;
     color: @black;
     text-align: left;
   }
@@ -75,16 +71,16 @@
     position: absolute;
     top: 200px;
     left: 300px;
+    z-index: 5;
   }
 
   .about__button {
+    .base-text(20px, 20px);
     width: 245px;
     height: 40px;
     margin-left: 90px;
     margin-top: 47px;
     padding-top: 15px;
-    font-size: 20px;
-    line-height: 20px;
   }
 }
 

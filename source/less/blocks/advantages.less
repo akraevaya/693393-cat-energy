@@ -23,6 +23,27 @@
     width: 60px;
     height: 60px;
     background-color: @green;
+    background-image: url("../img/advantage-leaf@1x.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &:nth-child(2) {
+    &::before {
+      background-image: url("../img/advantage-powder@1x.png");
+    }
+  }
+
+  &:nth-child(3) {
+    &::before {
+      background-image: url("../img/advantage-dining@1x.png");
+    }
+  }
+
+  &:last-child {
+    &::before {
+      background-image: url("../img/advantage-clock@1x.png");
+    }
   }
 }
 

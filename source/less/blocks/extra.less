@@ -64,13 +64,12 @@
 
 .extra__button {
   .green-button();
+  .base-text(16px, 20px);
   width: 280px;
   height: 40px;
   margin-top: 15px;
   padding-bottom: 10px;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
+  font-family: @font-stack;
 }
 
 .extra__order-all {
@@ -114,10 +113,9 @@
   }
 
   .extra__caption {
+    .base-text(36px, 36px);
     margin-top: 68px;
     margin-left: 36px;
-    font-size: 36px;
-    line-height: 36px;
 
     &::before {
       content: "";
@@ -287,8 +285,6 @@
   }
 
   .extra__table tr {
-    display: flex;
-    flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
     width: 290px;

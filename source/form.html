@@ -30,9 +30,9 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__caption">Подбор программы</h1>
-      <p class="page-main__description">Заполните анкету и мы подберем  программу питания для вашего кота</p>
       <form class="page-main__form form" action="https://echo.htmlacademy.ru" method="post">
+        <h1 class="form__headline">Подбор программы</h1>
+        <p class="form__description">Заполните анкету и мы подберем  программу питания для вашего кота</p>
         <div class="form__container">
           <div class="form__fieldset form__fieldset--user">
             <div class="form__item form__item--user">
@@ -53,17 +53,17 @@
 
           <div class="form__fieldset form__fieldset--mission">
             <div class="form__item form__item--mission">
-              <input class="form__radio visually-hidden" type="radio" name="radio-button" id="form-radio-button-1" checked>
+              <input class="form__radio visually-hidden" type="radio" name="radio-button" value="Похудение" id="form-radio-button-1" checked>
               <label class="form__label form__label--mission" for="form-radio-button-1">Похудение</label>
             </div>
 
             <div class="form__item form__item--mission">
-              <input class="form__radio visually-hidden" type="radio" name="radio-button" id="form-radio-button-2">
+              <input class="form__radio visually-hidden" type="radio" name="radio-button" value="Набор массы" id="form-radio-button-2">
               <label class="form__label form__label--mission" for="form-radio-button-2">Набор массы</label>
             </div>
 
             <div class="form__item form__item--mission">
-              <input class="form__radio visually-hidden" type="radio" name="radio-button" id="form-radio-button-3">
+              <input class="form__radio visually-hidden" type="radio" name="radio-button" value="Не знаю (Нужен ваш совет)" id="form-radio-button-3">
               <label class="form__label form__label--mission" for="form-radio-button-3">Не знаю (Нужен ваш совет)</label>
             </div>
           </div>
@@ -122,10 +122,12 @@
       </form>
 
       <section class="contacts contacts--form">
-        <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__wrapper">
-          <p class="contacts__welcome">приглашаем к&nbsp;сотрудничеству дилеров!</p>
-          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__spb">Санкт-Петербург</span></p>
+        <div class="contacts__container">
+          <h2 class="visually-hidden">Контакты</h2>
+          <div class="contacts__wrapper">
+            <p class="contacts__welcome">приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__spb">Санкт-Петербург</span></p>
+          </div>
         </div>
         <div class="contacts__map"></div>
       </section>

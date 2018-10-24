@@ -44,8 +44,7 @@
 }
 
 .main-nav__link {
-  font-size: 20px;
-  line-height: 20px;
+  .base-text(20px, 20px);
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
@@ -115,19 +114,22 @@
   }
 
   .main-nav__link {
-    font-size: 18px;
-    line-height: 24px;
+    .base-text(18px, 24px);
+    display: inline-block;
+    padding-bottom: 8px;
     font-weight: 400;
 
     &--active {
-      border-bottom: 1px solid @green;
+      border-bottom: 2px solid @green;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
+    position: relative;
     width: 484px;
+    z-index: 5;
   }
 
   .main-nav__list {
@@ -138,15 +140,16 @@
   }
 
   .main-nav__link {
+    padding-bottom: 11px;
+
     &--index {
-      font-size: 20px;
-      line-height: 25px;
+      .base-text(20px, 25px);
       font-weight: 400;
       color: @white;
     }
-  }
 
-  .main-nav__item--active .main-nav__link--index {
-    border-bottom: 1px solid @white;
+    &--white {
+      border-bottom: 1px solid @white;
+    }
   }
 }

@@ -4,6 +4,13 @@
   padding: 0;
 }
 
+.catalog__caption {
+  .caption();
+  margin: 0;
+  margin-top: 14px;
+  margin-bottom: 26px;
+}
+
 .catalog__list {
   .reset-indents();
   display: flex;
@@ -124,6 +131,13 @@
     width: 708px;
   }
 
+  .catalog__caption {
+    font-size: 60px;
+    width: 570px;
+    margin: 0;
+    margin-top: 47px;
+  }
+
   .catalog__list {
     margin-top: 24px;
   }
@@ -209,6 +223,10 @@
 @media (min-width: @desktop-width) {
   .catalog {
     width: 1220px;
+  }
+
+  .catalog__caption {
+    margin-top: 68px;
   }
 
   .catalog__list {

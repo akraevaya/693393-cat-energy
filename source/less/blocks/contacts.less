@@ -94,16 +94,20 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
+    width: auto;
+    min-height: 400px;
+  }
+
+  .contacts__container {
     position: relative;
     width: @desktop-width;
-    min-height: 400px;
+    margin: 0 auto;
   }
 
   .contacts__wrapper {
     position: absolute;
     top: 94px;
     left: 40px;
-    display: flex;
     justify-content: space-around;
     width: 570px;
     background-color: @white;
@@ -121,8 +125,9 @@
   }
 
   .contacts__map {
-    width: @desktop-width;
+    width: auto;
     height: 400px;
     background-image: url("../img/bg-map-desktop@1x.png");
+    background-size: 100%;
   }
 }
