@@ -9,6 +9,7 @@
   margin: 0;
   margin-top: 14px;
   margin-bottom: 26px;
+  letter-spacing: -1px;
 }
 
 .form__description {
@@ -19,6 +20,7 @@
   color: @black;
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: -0.3px;
 }
 
 .form__fieldset {
@@ -47,7 +49,7 @@
   width: 185px;
   color: @black;
   font-weight: 400;
-  font-stretch: ultra-condensed;
+  letter-spacing: -1px;
 
   &--contacts {
     width: 200px;
@@ -124,9 +126,9 @@
   .base-text(16px, 18px);
   font-family: @font-stack;
   font-weight: 400;
-  font-stretch: ultra-condensed;
   text-transform: uppercase;
   color: #222222;
+  letter-spacing: -0.5px;
 }
 
 .form__label {
@@ -281,6 +283,7 @@
   margin-top: 15px;
   padding-bottom: 10px;
   font-family: @font-stack;
+  letter-spacing: -0.5px;
 }
 
 .form__attention {
@@ -303,6 +306,7 @@
     width: 570px;
     margin: 0;
     margin-top: 47px;
+    letter-spacing: -2px;
   }
 
   .form__description {
@@ -310,12 +314,12 @@
     width: 375px;
     margin-top: 54px;
     margin-left: 40px;
-    font-stretch: ultra-condensed;
+    letter-spacing: -0.5px;
   }
 
   .form__caption {
     .base-text(36px, 36px);
-    font-stretch: condensed;
+    letter-spacing: -1.25px;
 
     &--contacts {
       width: 575px;
@@ -449,6 +453,10 @@
   .form__label {
     &--mission {
       margin-left: 60px;
+    }
+
+    &--extra {
+      margin-left: 20px;
     }
   }
 
@@ -589,6 +597,10 @@
     margin-top: 68px;
   }
 
+  .form__description {
+    margin-left: 0;
+  }
+
   .form__container {
     display: flex;
   }
@@ -639,7 +651,7 @@
   }
 
   .form__field {
-    margin-left: 15px;
+    margin-left: 16px;
 
     &--name {
       width: 506px;
@@ -647,6 +659,7 @@
 
     &--weight {
       width: 475px;
+      margin-left: 20px;
     }
 
     &--age {
@@ -655,8 +668,8 @@
 
     &--email {
       width: 486px;
-      margin-right: 74px;
-      margin-left: 17px;
+      margin-right: 78px;
+      margin-left: 21px;
       background-position: 450px center;
     }
 
@@ -699,7 +712,7 @@
       &::before {
         content: "";
         position: absolute;
-        top: 20px;
+        top: 22px;
         left: -110px;
         width: 70px;
         height: 3px;
@@ -709,9 +722,9 @@
       &::after {
         content: "";
         position: absolute;
-        top: 20px;
+        top: 22px;
         right: -40px;
-        width: 680px;
+        width: 705px;
         height: 3px;
         background-color: @green;
       }
@@ -736,7 +749,7 @@
         position: absolute;
         top: 20px;
         right: -40px;
-        width: 1000px;
+        width: 1040px;
         height: 3px;
         background-color: @green;
       }
@@ -762,7 +775,7 @@
         position: absolute;
         top: 20px;
         right: -40px;
-        width: 1000px;
+        width: 1010px;
         height: 3px;
         background-color: @green;
       }
@@ -784,11 +797,11 @@
     }
 
     &--water {
-      margin-left: 133px;
+      margin-left: 143px;
     }
 
     &--milk {
-      margin-left: 77px;
+      margin-left: 79px;
     }
 
     &--vitamins {

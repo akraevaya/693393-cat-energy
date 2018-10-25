@@ -13,6 +13,7 @@
   padding-bottom: 13px;
   color: @black;
   font-weight: 400;
+  letter-spacing: -1.25px;
 
   &::after {
     content: "";
@@ -48,6 +49,7 @@
   color: #222222;
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: -0.5px;
 }
 
 .extra__table {
@@ -70,6 +72,7 @@
   margin-top: 15px;
   padding-bottom: 10px;
   font-family: @font-stack;
+  letter-spacing: -0.5px;
 }
 
 .extra__order-all {
@@ -168,6 +171,7 @@
   .extra__table {
     .base-text(16px, 16px);
     width: 230px;
+    margin-top: 8px;
     border-collapse: collapse;
   }
 
@@ -202,8 +206,8 @@
     width: 708px;
     height: 200px;
     margin: 0 auto;
-    margin-top: 68px;
-    margin-bottom: 75px;
+    margin-top: 70px;
+    margin-bottom: 73px;
     background-color: @green;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-repeat: no-repeat;
@@ -227,12 +231,12 @@
 @media (min-width: @desktop-width) {
   .extra {
     width: 1220px;
-    margin-bottom: 90px;
+    margin-bottom: 86px;
   }
 
   .extra__caption {
     margin: 0;
-    margin-top: 76px;
+    margin-top: 73px;
 
     &::before {
       content: "";
@@ -260,7 +264,7 @@
     justify-content: space-between;
     align-items: center;
     width: 1220px;
-    margin-top: 65px;
+    margin-top: 67px;
   }
 
   .extra__list {
@@ -275,7 +279,7 @@
   }
 
   .extra__name {
-    padding-top: 6px;
+    padding-top: 2px;
   }
 
   .extra__table {
@@ -298,6 +302,10 @@
   .extra__value {
     width: 45px;
     text-align: right;
+
+    &--50 {
+      margin-right: 10px;
+    }
   }
 
   .extra__button {
