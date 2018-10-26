@@ -1,22 +1,7 @@
 .page-main {
-  width: 280px;
+  width: @mobile-width;
   margin: 0 auto;
   padding: 0;
-}
-
-.page-main__caption {
-  .caption();
-  margin-left: 20px;
-  margin-top: 50px;
-}
-
-.page-main__description {
-  .base-text();
-  width: 230px;
-  margin-left: 20px;
-  color: @black;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 .page-main__form {
@@ -26,16 +11,12 @@
 
 @media (min-width: @tablet-width) {
   .page-main {
-    width: 708px;
-  }
-
-  .page-main__description {
-    margin-left: 70px;
+    width: @tablet-width;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main {
-    width: 1220px;
+    width: auto;
   }
 }

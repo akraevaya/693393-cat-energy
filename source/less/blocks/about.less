@@ -1,68 +1,112 @@
 .about {
-  width: 280px;
+  position: relative;
+  width: @mobile-width;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 0;
-  background-image: url("img/index-background-mobile@1x.jpg");
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
   background-size: contain;
 }
 
 .about__caption {
-  font-size: 36px;
-  line-height: 36px;
+  .reset-indents();
+  .base-text(36px, 36px);
+  padding-top: 25px;
   font-weight: 400;
   color: @white;
   text-align: center;
-  background-color: @green;
 }
 
 .about__slogan {
-  font-size: 14px;
-  line-height: 14px;
+  .reset-indents();
+  .base-text(14px, 14px);
+  display: block;
+  padding-top: 26px;
   font-weight: 400;
   color: @white;
   text-transform: uppercase;
   text-align: center;
-  background-color: @green;
+}
+
+.about__can {
+  .reset-indents();
+  width: 280px;
+  height: 270px;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 .about__button {
   .green-button();
   width: 280px;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
   .about {
     width: 708px;
+    margin-bottom: 527px;
+    background-image: none;
   }
 
   .about__caption {
-    width: 427px;
-    margin-left: 120px;
-    font-size: 60px;
-    line-height: 60px;
+    .base-text(60px, 60px);
+    width: 450px;
+    margin-left: 85px;
+    margin-top: 22px;
     color: @black;
     text-align: left;
-    background-color: @white;
   }
 
   .about__slogan {
-    margin-left: 120px;
-    font-size: 20px;
-    line-height: 20px;
+    .base-text(20px, 20px);
+    margin-left: 87px;
+    margin-top: 15px;
     color: @black;
     text-align: left;
-    background-color: @white;
+  }
+
+  .about__can {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    z-index: 5;
   }
 
   .about__button {
+    .base-text(20px, 20px);
     width: 245px;
-    margin-left: 120px;
+    height: 38px;
+    margin-left: 90px;
+    margin-top: 47px;
+    padding-top: 15px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .about {
     width: 1220px;
+    margin-bottom: 232px;
+  }
+
+  .about__caption {
+    margin-left: 80px;
+    margin-top: 77px;
+  }
+
+  .about__slogan {
+    margin-left: 80px;
+    margin-top: 15px;
+  }
+
+  .about__can {
+    left: 600px;
+  }
+
+  .about__button {
+    margin-left: 80px;
+    margin-top: 52px;
+    height: 36px;
   }
 }

@@ -1,22 +1,135 @@
 .stats-list {
   .reset-indents();
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .stats-list__item {
-  display: flex;
-  flex-direction: column-reverse;
+  position: relative;
+  min-width: 123px;
+  padding: 13px 0 17px;
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  &--sum {
+    margin-top: 20px;
+    border: none;
+  }
 }
 
 .stats-list__fact {
   .info-text();
   .base-text(12px, 12px);
+  padding: 0 10px;
+  position: absolute;
+  bottom: -28px;
+  left: 20px;
+  width: 65px;
+  background-color: @bg-lightgray;
 }
 
 .stats-list__number {
   .base-text(24px, 24px);
+  margin: 0;
   color: @text-darkgray;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.stats-list__sum {
+  .reset-indents();
+  .base-text(14px, 20px);
+  color: @black;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .stats-list {
+    justify-content: flex-start;
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  .stats-list__item {
+    min-width: 160px;
+    margin-right: 42px;
+    padding-bottom: 17px;
+
+    &--sum {
+      margin-top: 10px;
+      margin-right: 0;
+      margin-left: 110px;
+      padding: 0;
+    }
+  }
+
+  .stats-list__item--sum span {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .stats-list__fact {
+    .base-text(14px, 14px);
+    width: 105px;
+    padding: 0 5px;
+    left: 22px;
+    bottom: -20px;
+    background-color: @white;
+  }
+
+  .stats-list__item:nth-child(2) .stats-list__fact {
+    width: 130px;
+    left: 10px;
+  }
+
+  .stats-list__number {
+    .base-text(30px, 37px);
+  }
+
+  .stats-list__sum {
+    width: 188px;
+    font-size: 20px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stats-list {
+    position: relative;
+    width: 415px;
+    margin: 0;
+    margin-top: 67px;
+    z-index: 5;
+  }
+
+  .stats-list__item {
+    margin-bottom: 30px;
+    padding-top: 16px;
+
+    &--sum {
+      margin: 0;
+      margin-top: 16px;
+    }
+  }
+
+  .stats-list__sum {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 328px;
+    padding: 0;
+    text-align: left;
+  }
+
+  .stats-list__fact {
+    bottom: -22px;
+    background-color: @bg-lightgray;
+  }
+
+  .stats-list__sum span {
+    margin: 0;
+  }
 }

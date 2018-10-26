@@ -1,22 +1,36 @@
 .results {
-  width: 280px;
+  width: @mobile-width;
   margin: 0 auto;
+  margin-top: 20px;
   padding: 0;
   background-color: @bg-lightgray;
 }
 
 .results__caption {
+  .reset-indents();
   .caption();
+  padding-left: 20px;
+  padding-top: 17px;
 }
 
 .results__description {
+  .reset-indents();
   .info-text();
   .base-text();
+  width: 270px;
+  margin-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 23px;
+  color: @text-darkgray;
 }
 
 .results__wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .results__stats,
@@ -25,38 +39,66 @@
   list-style: none;
 }
 
-.results__sum {
-  .base-text(14px, 20px);
-  color: @black;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.results__toggle {
-  .reset-indents();
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-  text-align: center;
-}
-
 @media (min-width: @tablet-width) {
   .results {
-    width: 708px;
+    width: 768px;
+    background-color: @white;
   }
 
-  .results__wrapper {
-    flex-direction: row;
+  .results__caption {
+    font-size: 60px;
+    padding: 0;
+    padding-left: 30px;
+  }
+
+  .results__description {
+    .base-text(16px, 24px);
+    width: 680px;
+    margin-left: 30px;
+    margin-top: 63px;
+    margin-bottom: 53px;
+    padding: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .results {
-    width: 1220px;
+    width: auto;
+    margin-top: 0;
+    padding-bottom: 10px;
+    background-image: linear-gradient(to bottom, @white 24%, @bg-lightgray 24%);
   }
 
-  .results__wrapper {
+  .results__container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    align-content: space-between;
+    width: 1220px;
+    height: 600px;
+    margin: 0 auto;
+  }
+
+  .results__caption {
+    width: 610px;
+    margin-top: 12px;
+    padding: 0;
+  }
+
+  .results__description {
+    position: relative;
+    width: 435px;
+    margin: 0;
+    margin-top: 147px;
+    z-index: 5;
+  }
+
+  .results__slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 585px;
   }
 }

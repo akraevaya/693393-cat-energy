@@ -3,7 +3,7 @@ html {
   .reset-indents();
   .base-text();
   min-width: 320px;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: @font-stack;
   color: @text-darkgray;
   background-color: @white;
 }
@@ -13,8 +13,7 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active),
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -25,4 +24,14 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.green-button() {
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.4);
+  }
 }

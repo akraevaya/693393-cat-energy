@@ -1,30 +1,50 @@
 .extra {
   width: 280px;
   margin: 0 auto;
+  margin-bottom: 37px;
   padding: 0;
 }
 
 .extra__caption {
   .base-text(24px, 24px);
+  position: relative;
+  margin: 0;
+  margin-top: 27px;
+  padding-bottom: 13px;
   color: @black;
   font-weight: 400;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -20px;
+    width: 53px;
+    height: 3px;
+    background-color: @green;
+  }
 }
 
 .extra__list {
   .reset-indents();
+  margin-top: 20px;
   list-style: none;
 }
 
 .extra__item {
   .reset-indents();
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  height: 128px;
+  border-bottom: 1px solid #d9d9d9;
+
+  &:first-child {
+    border-top: 1px solid #d9d9d9;
+  }
 }
 
 .extra__name {
   .base-text(16px, 16px);
+  margin: 0;
+  padding-top: 15px;
   color: #222222;
   font-weight: 400;
   text-transform: uppercase;
@@ -33,63 +53,279 @@
 .extra__table {
   .info-text();
   .base-text(14px, 14px);
+  border-collapse: collapse;
+  width: 280px;
+  margin-top: 10px;
+}
+
+.extra__value {
+  text-align: right;
 }
 
 .extra__button {
   .green-button();
+  .base-text(16px, 20px);
   width: 280px;
+  height: 40px;
+  margin-top: 15px;
+  padding-bottom: 10px;
+  font-family: @font-stack;
 }
 
 .extra__order-all {
   .base-text(16px, 20px);
+  position: relative;
   display: block;
   width: 280px;
   height: 289px;
-  margin-top: auto;
+  margin-top: 40px;
   font-family: "Arial", sans-serif;
   color: @white;
   font-weight: 400;
   text-align: center;
   background-color: @green;
-  background-image: url("img/gift-photo-mobile@1x.jpg");
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 112px;
+    width: 55px;
+    height: 60px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.extra__order-all span {
+  display: block;
+  width: 170px;
+  margin: 0 auto;
+  padding-top: 187px;
 }
 
 @media (min-width: @tablet-width) {
   .extra {
     width: 708px;
-  }
-
-  .extra__caption {
-    margin-left: 40px;
-  }
-
-  .extra__wrapper {
-    width: 633px;
     margin: 0 auto;
   }
 
+  .extra__caption {
+    .base-text(36px, 36px);
+    margin-top: 68px;
+    margin-left: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: -70px;
+      width: 30px;
+      height: 3px;
+      background-color: @green;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: -30px;
+      width: 310px;
+      height: 3px;
+      background-color: @green;
+    }
+  }
+
+  .extra__wrapper {
+    width: 708px;
+    margin: 0 auto;
+    margin-top: 65px;
+  }
+
+  .extra__list {
+    width: 708px;
+    margin: 0 auto;
+    border: 1px solid #d9d9d9;
+  }
+
   .extra__item {
-    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    width: 633px;
+    height: 138px;
+    margin: 0 auto;
+  }
+
+  .extra__name {
+    .base-text(20px, 20px);
+    padding-top: 8px;
+  }
+
+  .extra__table {
+    .base-text(16px, 16px);
+    width: 230px;
+    margin-top: 8px;
+    border-collapse: collapse;
+  }
+
+  .extra__table tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 235px;
+    margin-top: 10px;
+  }
+
+  .extra__data {
+    display: block;
+    text-align: right;
+  }
+
+  .extra__value {
+    display: block;
+    width: 95px;
   }
 
   .extra__button {
+    align-self: flex-start;
     width: 634px;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
   }
 
   .extra__order-all {
-    width: 633px;
+    width: 708px;
+    height: 200px;
+    margin: 0 auto;
     margin-top: 70px;
+    margin-bottom: 73px;
+    background-color: @green;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-repeat: no-repeat;
+
+    &::before {
+      top: 63px;
+      left: 90px;
+    }
+  }
+
+  .extra__order-all span {
+    width: 170px;
+    margin: 0;
+    padding: 0;
+    padding-left: 422px;
+    padding-top: 70px;
+    text-align: left;
   }
 }
 
 @media (min-width: @desktop-width) {
   .extra {
     width: 1220px;
+    margin-bottom: 86px;
   }
 
-  .extra-wrapper {
+  .extra__caption {
+    margin: 0;
+    margin-top: 73px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: -110px;
+      width: 70px;
+      height: 3px;
+      background-color: @green;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: -40px;
+      width: 850px;
+      height: 3px;
+      background-color: @green;
+    }
+  }
+
+  .extra__wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1220px;
+    margin-top: 67px;
+  }
+
+  .extra__list {
+    width: 895px;
+    margin: 0;
+    border: none;
+  }
+
+  .extra__item {
+    width: 895px;
+    height: 71px;
+  }
+
+  .extra__name {
+    padding-top: 2px;
+  }
+
+  .extra__table {
+    width: 325px;
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .extra__table tr {
+    align-items: baseline;
+    justify-content: space-between;
+    width: 290px;
+    margin-top: 10px;
+  }
+
+  .extra__data {
+    text-align: left;
+  }
+
+  .extra__value {
+    width: 45px;
+    text-align: right;
+
+    &--water {
+      margin-right: 10px;
+    }
+  }
+
+  .extra__button {
+    width: 245px;
+    margin-top: 15px;
+  }
+
+  .extra__order-all {
+    width: 245px;
+    height: 290px;
+    margin: 0;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    &::before {
+      top: 68px;
+      left: 95px;
+    }
+  }
+
+  .extra__order-all span {
+    padding: 0;
+    padding-top: 189px;
+    padding-left: 38px;
+    text-align: center;
   }
 }
