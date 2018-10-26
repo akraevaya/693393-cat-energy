@@ -113,6 +113,17 @@
     border: none;
   }
 
+  .main-nav__item a[href] {
+    &:hover {
+      color: #666666;
+    }
+
+    &:active {
+      color: #666666;
+      opacity: 0.4;
+    }
+  }
+
   .main-nav__link {
     .base-text(18px, 24px);
     display: inline-block;
@@ -137,6 +148,18 @@
     min-height: 120px;
     margin: 0;
     margin-top: 73px;
+  }
+
+  .main-nav__item--index a[href] {
+    &:hover {
+      color: @white;
+      opacity: 0.8;
+    }
+
+    &:active {
+      color: @white;
+      opacity: 0.4;
+    }
   }
 
   .main-nav__link {

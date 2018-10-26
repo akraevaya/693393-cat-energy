@@ -168,14 +168,14 @@
   border-radius: 50%;
 }
 
-.form__radio:disabled + .form__label--mission::before,
-.form__radio:active + .form__label--mission::before {
-  opacity: 0.4;
-}
-
 .form__radio:hover + .form__label--mission::before {
   border: 1px solid #bcbcbc;
   cursor: pointer;
+}
+
+.form__radio:disabled + .form__label--mission,
+.form__radio:active + .form__label--mission {
+  opacity: 0.4;
 }
 
 .form__checkbox {
@@ -198,14 +198,14 @@
   background-position: center center;
 }
 
-.form__checkbox:disabled + .form__label--extra::before,
-.form__checkbox:active + .form__label--extra::before {
-  opacity: 0.4;
-}
-
 .form__checkbox:hover + .form__label--extra::before {
   border: 1px solid #bcbcbc;
   cursor: pointer;
+}
+
+.form__checkbox:disabled + .form__label--extra,
+.form__checkbox:active + .form__label--extra {
+  opacity: 0.4;
 }
 
 .form__field {
@@ -222,7 +222,7 @@
     cursor: pointer;
   }
 
-  &:active {
+  &:focus {
     border: 2px solid @black;
   }
 
@@ -232,6 +232,10 @@
     &:invalid {
       border: 2px solid #ff8282;
     }
+
+    &:focus {
+      border: 2px solid @black;
+    }
   }
 
   &--weight {
@@ -239,6 +243,10 @@
 
     &:invalid {
       border: 2px solid #ff8282;
+    }
+
+    &:focus {
+      border: 2px solid @black;
     }
   }
 
@@ -252,13 +260,14 @@
     background-repeat: no-repeat;
     background-position: 186px center;
 
-    &:active {
-      background-image: url("../img/icon-mail-green.svg");
-    }
-
     &:invalid {
       border: 2px solid #ff8282;
       background-image: url("../img/icon-mail-red.svg");
+    }
+
+    &:focus {
+      border: 2px solid @black;
+      background-image: url("../img/icon-mail-green.svg");
     }
   }
 
@@ -268,13 +277,14 @@
     background-repeat: no-repeat;
     background-position: 170px center;
 
-    &:active {
-      background-image: url("../img/icon-phone-green.svg");
-    }
-
     &:invalid {
       border: 2px solid #ff8282;
       background-image: url("../img/icon-phone-red.svg");
+    }
+
+    &:focus {
+      border: 2px solid @black;
+      background-image: url("../img/icon-phone-green.svg");
     }
   }
 }
@@ -289,7 +299,7 @@
     cursor: pointer;
   }
 
-  &:active {
+  &:focus {
     border: 2px solid @black;
   }
 }
@@ -450,7 +460,7 @@
       align-items: center;
       justify-content: space-between;
       width: 630px;
-      margin-bottom: 75px;
+      margin-bottom: 72px;
     }
   }
 
@@ -593,11 +603,12 @@
     }
 
     &--water {
-      margin-left: 155px;
+      margin-left: 163px;
     }
 
     &--vitamins {
-      margin-left: 255px;
+      margin-left: 256px;
+      margin-bottom: 47px;
     }
   }
 }
@@ -811,7 +822,7 @@
     }
 
     &--water {
-      margin-left: 143px;
+      margin-left: 146px;
     }
 
     &--milk {
@@ -819,7 +830,7 @@
     }
 
     &--vitamins {
-      margin-left: 235px;
+      margin-left: 237px;
     }
   }
 }
