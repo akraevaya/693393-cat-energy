@@ -54,18 +54,16 @@
   }
 }
 
-.social-list__icon:hover {
-  path {
+.social-list__icon {
+  fill: #666666;
+
+  &:hover {
     fill: @green;
   }
 
-  circle {
-    fill: @green;
+  &:active {
+    opacity: 0.4;
   }
-}
-
-.social-list__icon:active {
-  opacity: 0.4;
 }
 
 @media (min-width: @tablet-width) {
