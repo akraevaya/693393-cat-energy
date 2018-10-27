@@ -10,7 +10,11 @@
     <header class="page-header page-header--form">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="271" height="65" alt="Cat Energy - функциональное питание для котов">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Cat Energy - функциональное питание для котов">
+          </picture>
         </a>
         <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -206,6 +210,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/picturefill.js"></script>
 
   </body>
 </html>

@@ -7,6 +7,10 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .about__caption {
@@ -69,13 +73,16 @@
 
   .about__can {
     position: absolute;
-    top: 200px;
-    left: 300px;
-    z-index: 5;
+    top: 195px;
+    left: -20px;
+    width: 709px;
+    height: 609px;
   }
 
   .about__button {
     .base-text(20px, 20px);
+    position: relative;
+    z-index: 5;
     width: 245px;
     height: 38px;
     margin-left: 90px;
@@ -101,7 +108,11 @@
   }
 
   .about__can {
-    left: 600px;
+    top: -85px;
+    left: 430px;
+    z-index: 5;
+    width: 552px;
+    height: 499px;
   }
 
   .about__button {
