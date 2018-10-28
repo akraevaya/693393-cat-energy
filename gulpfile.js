@@ -13,8 +13,7 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
-var uglify = require('gulp-uglify');
-var pump = require('pump');
+var minify = require("gulp-minify");
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -30,13 +29,12 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("compress", function(cb) {
-  pump([
-    gulp.src('source/js/*.js'),
-    uglify(),
-    gulp.dest('build/js')
-  ],
-  cb);
+gulp.task("compress", function() {
+  return gulp.src("source/js/*.js")
+    .pipe(minify())
+    .pipe(gulp.dest("build/js"))
+    .pipe(server.stream());
+
 });
 
 gulp.task("images", function () {
