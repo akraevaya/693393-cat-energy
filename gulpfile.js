@@ -31,7 +31,7 @@ gulp.task("css", function () {
 
 gulp.task("compress", function() {
   return gulp.src("source/js/*.js")
-    .pipe(minify())
+    .pipe(minify({noSource: true}))
     .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
 
