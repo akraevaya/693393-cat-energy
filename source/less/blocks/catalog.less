@@ -259,15 +259,21 @@
   }
 
   .catalog__list {
+    justify-content: flex-start;
     margin: 0;
     margin-top: 22px;
     padding: 0;
   }
 
   .catalog__item {
+    width: 245px;
     margin: 0;
     margin-top: 143px;
-    width: 245px;
+    margin-right: 80px;
+
+    &:nth-child(4n+4) {
+      margin-right: 0;
+    }
   }
 
   .catalog__container {
