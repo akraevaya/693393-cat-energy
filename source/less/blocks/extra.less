@@ -1,33 +1,41 @@
 .extra {
-  width: 280px;
-  margin: 0 auto;
-  margin-bottom: 37px;
-  padding: 0;
-}
-
-.extra__caption {
-  .base-text(24px, 24px);
   position: relative;
-  margin: 0;
-  margin-top: 27px;
-  padding-bottom: 13px;
-  color: @black;
-  font-weight: 400;
+  width: auto;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  padding: 0;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 15px;
-    right: -20px;
-    width: 53px;
+    width: 100%;
     height: 3px;
     background-color: @green;
   }
 }
 
+.extra__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.extra__caption {
+  .base-text(24px, 24px);
+  position: relative;
+  width: 248px;
+  margin: 0;
+  margin-top: 27px;
+  padding-bottom: 13px;
+  padding-left: 20px;
+  color: @black;
+  font-weight: 400;
+  background-color: @white;
+}
+
 .extra__list {
   .reset-indents();
-  margin-top: 20px;
+  margin-top: 21px;
   list-style: none;
 }
 
@@ -86,6 +94,7 @@
   background-color: @green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: contain;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
@@ -112,33 +121,25 @@
 
 @media (min-width: @tablet-width) {
   .extra {
-    width: 708px;
+    position: relative;
+    width: auto;
     margin: 0 auto;
+
+    &::before {
+      top: 20px;
+    }
   }
 
   .extra__caption {
     .base-text(36px, 36px);
+    width: 380px;
     margin-top: 68px;
     margin-left: 36px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 20px;
-      left: -70px;
-      width: 30px;
-      height: 3px;
-      background-color: @green;
-    }
+    padding-left: 32px;
+    background-color: @white;
 
     &::after {
-      content: "";
-      position: absolute;
-      top: 20px;
-      right: -30px;
-      width: 310px;
-      height: 3px;
-      background-color: @green;
+      display: none;
     }
   }
 
@@ -236,33 +237,25 @@
 
 @media (min-width: @desktop-width) {
   .extra {
-    width: 1220px;
+    width: auto;
+    margin: 0 auto;
     margin-bottom: 86px;
+
+    &::before {
+      top: 22px;
+    }
+  }
+
+  .extra__container {
+    width: @desktop-width;
+    margin: 0 auto;
   }
 
   .extra__caption {
+    width: 372px;
     margin: 0;
-    margin-top: 73px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 22px;
-      left: -110px;
-      width: 70px;
-      height: 3px;
-      background-color: @green;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 22px;
-      right: -40px;
-      width: 885px;
-      height: 3px;
-      background-color: @green;
-    }
+    margin-top: 74px;
+    padding-left: 40px;
   }
 
   .extra__wrapper {
@@ -306,7 +299,6 @@
   }
 
   .extra__value {
-    width: 45px;
     text-align: right;
 
     &--water {
