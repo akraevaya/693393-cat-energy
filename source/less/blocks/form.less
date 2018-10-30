@@ -153,10 +153,6 @@
   }
 }
 
-.form__radio {
-  display: none;
-}
-
 .form__radio + .form__label--mission::before {
   content: "";
   position: absolute;
@@ -191,8 +187,8 @@
   opacity: 0.4;
 }
 
-.form__checkbox {
-  display: none;
+.form__radio:focus + .form__label--mission::before {
+  outline: 2px solid #8fbdec;
 }
 
 .form__checkbox + .form__label--extra::before {
@@ -219,6 +215,10 @@
 .form__checkbox:disabled + .form__label--extra,
 .form__checkbox:active + .form__label--extra {
   opacity: 0.4;
+}
+
+.form__checkbox:focus + .form__label--extra::before {
+  outline: 2px solid #8fbdec;
 }
 
 .form__field {
@@ -669,8 +669,6 @@
 
     &--contacts {
       display: block;
-      // flex-direction: row;
-      // width: 1220px;
       margin-top: 50px;
     }
 
@@ -685,7 +683,6 @@
 
     &--extra {
       display: block;
-      // width: 1220px;
       margin: 0;
       margin-top: 67px;
     }
@@ -719,8 +716,6 @@
     &--email {
       width: 486px;
       margin: 0;
-      // margin-right: 78px;
-      // margin-left: 21px;
       background-position: 447px center;
     }
 
@@ -767,8 +762,6 @@
   }
 
   .form__caption {
-    // width: 1220px;
-
     &--contacts {
       width: 554px;
       margin-top: 12px;
@@ -810,34 +803,10 @@
       margin: 0;
     }
 
-    // &--email {
-    //   justify-content: flex-start;
-    // }
-
-    // &--phone {
-    //   justify-content: flex-end;
-    // }
-
     &--extra {
       width: 200px;
       margin: 0;
       margin-left: 45px;
     }
-
-    // &--sugar {
-    //   margin-left: 38px;
-    // }
-
-    // &--water {
-    //   margin-left: 146px;
-    // }
-
-    // &--milk {
-    //   margin-left: 79px;
-    // }
-
-    // &--vitamins {
-    //   margin-left: 237px;
-    // }
   }
 }
