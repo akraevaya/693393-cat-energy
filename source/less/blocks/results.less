@@ -9,7 +9,6 @@
 .results__caption {
   .reset-indents();
   .caption();
-  padding-left: 20px;
   padding-top: 17px;
 }
 
@@ -17,10 +16,10 @@
   .reset-indents();
   .info-text();
   .base-text();
-  width: 270px;
+  width: auto;
   margin-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
+  // padding-left: 20px;
+  padding-right: 10px;
   padding-top: 23px;
   color: @text-darkgray;
 }
@@ -45,16 +44,18 @@
     background-color: @white;
   }
 
+  .results__wrapper {
+    width: 708px;
+  }
+
   .results__caption {
     font-size: 60px;
     padding: 0;
-    padding-left: 30px;
   }
 
   .results__description {
     .base-text(16px, 24px);
     width: 680px;
-    margin-left: 30px;
     margin-top: 63px;
     margin-bottom: 53px;
     padding: 0;
