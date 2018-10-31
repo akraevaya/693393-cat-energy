@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Cat Energy: Главная</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -121,21 +123,23 @@
 
       <section class="results">
         <div class="results__container">
-          <h2 class="results__caption">Живой пример</h2>
-          <p class="results__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <ul class="results__stats stats-list">
-            <li class="stats-list__item">
-              <p class="stats-list__number">5 кг</p>
-              <p class="stats-list__fact">снижение веса</p>
-            </li>
-            <li class="stats-list__item">
-              <p class="stats-list__number">60 дней</p>
-              <p class="stats-list__fact">затрачено времени</p>
-            </li>
-            <li class="stats-list__item stats-list__item--sum">
-              <p class="stats-list__sum">Затраты на питание: <span>15 000 руб.</span></p>
-            </li>
-          </ul>
+          <div class="results__wrapper">
+            <h2 class="results__caption">Живой пример</h2>
+            <p class="results__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <ul class="results__stats stats-list">
+              <li class="stats-list__item">
+                <p class="stats-list__number">5 кг</p>
+                <p class="stats-list__fact">снижение веса</p>
+              </li>
+              <li class="stats-list__item">
+                <p class="stats-list__number">60 дней</p>
+                <p class="stats-list__fact">затрачено времени</p>
+              </li>
+              <li class="stats-list__item stats-list__item--sum">
+                <p class="stats-list__sum">Затраты на питание: <span>15 000 руб.</span></p>
+              </li>
+            </ul>
+          </div>
 
           <div class="results__slider slider">
             <div class="slider__wrapper">
@@ -162,11 +166,11 @@
                 </li>
               </ul>
               <div class="slider__controls">
-                <div class="slider__button slider__button--before">Было</div>
+                <button type="button" class="slider__button slider__button--before">Было</button>
                 <div class="slider__scale">
                   <div class="slider__toggle"></div>
                 </div>
-                <div class="slider__button slider__button--after">Стало</div>
+                <button type="button" class="slider__button slider__button--after">Стало</button>
               </div>
             </div>
           </div>
