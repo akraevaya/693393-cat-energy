@@ -1,6 +1,5 @@
 .catalog {
-  width: @mobile-width;
-  margin: 0 auto;
+  width: auto;
   padding: 0;
 }
 
@@ -17,12 +16,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: auto;
   padding-top: 2px;
   list-style: none;
 }
 
 .catalog__item {
-  width: @mobile-width;
+  width: 100%;
   border-top: 1px solid #d9d9d9;
 
   &--show-all {
@@ -142,6 +142,7 @@
   .catalog {
     position: relative;
     width: 708px;
+    margin: 0 auto;
   }
 
   .catalog__caption {

@@ -1,11 +1,11 @@
 .slider {
+  width: @mobile-width;
   padding-top: 17px;
 }
 
 .slider__list {
   .reset-indents();
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   max-height: 237px;
   list-style: none;
@@ -52,19 +52,11 @@
   .slider {
     position: relative;
     width: @tablet-width;
+    margin: 0 auto;
     margin-top: 17px;
-    margin-bottom: 33px;
     padding: 0;
     padding-top: 17px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -33px;
-      width: 100vw;
-      height: 462px;
-      background-color: @bg-lightgray;
-    }
+    padding-bottom: 33px;
   }
 
   .slider__list {
@@ -150,10 +142,6 @@
     .reset-indents();
     width: 785px;
     margin-top: -42px;
-
-    &::before {
-      display: none;
-    }
   }
 
   .slider__list {
@@ -170,11 +158,7 @@
     &--before {
       width: 690px;
       margin: 0;
-      margin-left: 135px;
-    }
-
-    &--after {
-      overflow: hidden;
+      margin-left: 88px;
     }
   }
 

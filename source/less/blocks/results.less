@@ -1,9 +1,14 @@
 .results {
-  width: @mobile-width;
-  margin: 0 auto;
+  width: auto;
   margin-top: 20px;
   padding: 0;
   background-color: @bg-lightgray;
+}
+
+.results__container {
+  width: @mobile-width;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .results__caption {
@@ -39,12 +44,18 @@
 
 @media (min-width: @tablet-width) {
   .results {
-    width: 768px;
-    background-color: @white;
+    width: auto;
+    background-image: linear-gradient(to bottom, @white 55.5%, @bg-lightgray 55.5%);
+  }
+
+  .results__container {
+    width: @tablet-width;
+    margin: 0 auto;
   }
 
   .results__wrapper {
     width: 708px;
+    margin: 0 auto;
   }
 
   .results__caption {

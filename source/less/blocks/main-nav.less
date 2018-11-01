@@ -1,7 +1,7 @@
 .main-nav {
   position: relative;
-  width: @mobile-width;
-  margin: 0 auto;
+  width: auto;
+  // margin: 0 auto;
   padding: 0;
 }
 
@@ -30,12 +30,14 @@
 
 .main-nav__list {
   .reset-indents();
+  margin-bottom: 4px;
   list-style: none;
 }
 
 .main-nav__item {
   .base-text(20px, 20px);
-  margin-bottom: 5px;
+  width: auto;
+  margin-bottom: 1px;
   padding: 20px;
   color: @black;
   text-transform: uppercase;
@@ -45,11 +47,14 @@
 
 .main-nav__link {
   .base-text(20px, 20px);
+  display: inline-block;
+  margin: 0 auto;
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
   color: @black;
+  vertical-align: middle;
 }
 
 .main-nav__item a[href] {

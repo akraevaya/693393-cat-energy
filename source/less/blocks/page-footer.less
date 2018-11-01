@@ -1,7 +1,6 @@
 .page-footer {
-  width: @mobile-width;
+  width: auto;
   min-height: 236px;
-  margin: 0 auto;
   padding: 0;
   background-color: @bg-lightgray;
 }
@@ -36,9 +35,8 @@
 @media (min-width: @tablet-width) {
   .page-footer {
     .reset-indents();
-    width: @tablet-width;
+    width: auto;
     min-height: 150px;
-    margin: 0 auto;
   }
 
   .page-footer__wrapper {
@@ -47,6 +45,7 @@
     align-items: center;
     align-content: center;
     width: 708px;
+    margin: 0 auto;
     min-height: 150px;
   }
 
@@ -60,10 +59,10 @@
 @media (min-width: @desktop-width) {
   .page-footer {
     width: auto;
-    margin: 0 auto;
   }
 
   .page-footer__wrapper {
     width: 1220px;
+    margin: 0 auto;
   }
 }
