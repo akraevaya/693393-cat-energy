@@ -30,7 +30,6 @@
 
 .main-nav__list {
   .reset-indents();
-  margin-bottom: 4px;
   list-style: none;
 }
 
@@ -96,7 +95,7 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    width: 500px;
+    max-width: 500px;
     margin: 0;
   }
 
@@ -107,16 +106,20 @@
   .main-nav__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     min-height: 94px;
-    margin-left: 60px;
     margin-top: 43px;
   }
 
   .main-nav__item {
     margin: 0;
+    margin-left: 35px;
     padding: 0;
     border: none;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
   .main-nav__item a[href] {
